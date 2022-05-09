@@ -55,4 +55,10 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 4:45 - 5:00  (15 minutes) Recap and Summary (SS) - Link to slides - Link to video
 
 
-
+# Approch Overview
+What do we mean by 'do a re-executable' publication?
+* [DataLad](https://www.datalad.org/) install a particular dataset
+* [DataLad containers-run](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html) a particular container (that generates some derived images and results in NIDM)
+* [DataLad "Publish"](http://docs.datalad.org/projects/deprecated/en/latest/generated/man/datalad-publish.html) the resulting dataset
+* [pynidm](https://github.com/incf-nidash/PyNIDM) query the results, and run a specific statistical test
+* "Publish" the NIDM results to the [ReproLake](https://www.youtube.com/watch?v=VQ5t24mrvJI)
