@@ -1,5 +1,5 @@
 # OHBMEducation-2022
-Repo for the [2022 OHBM Education](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4055) 1/2 day course entitled: ["How to Write a Re-Executable Publication"] (https://www.humanbrainmapping.org/files/2022/2022%20Annual%20Meeting/%231162_Education_Course_Half_Day_-_How_to_Write_a_Re-executable_Publication.pdf)
+Repo for the [2022 OHBM Education](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4055) 1/2 day course entitled: ["How to Write a Re-Executable Publication"](https://www.humanbrainmapping.org/files/2022/2022%20Annual%20Meeting/%231162_Education_Course_Half_Day_-_How_to_Write_a_Re-executable_Publication.pdf)
 
 **When**: June 19th, 1pm-5pm local time
 
