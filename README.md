@@ -55,7 +55,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 4:45 - 5:00  (15 minutes) Recap and Summary (SS) - Link to slides - Link to video
 
 
-# Approch Overview
+# Approach Overview
 What do we mean by 'do a re-executable' publication?
 * [DataLad](https://www.datalad.org/) install a particular dataset
 * [DataLad containers-run](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html) a particular container (that generates some derived images and results in NIDM)
