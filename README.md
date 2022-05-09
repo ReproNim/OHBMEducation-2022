@@ -25,34 +25,34 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 
 
 # Tentative Schedule
-1:00 - 1:05 (5 minutes)   Introduction to the course (DNK/JBP)
+1:00 - 1:05 (5 minutes)   Introduction to the course (DNK/JBP) - Link to slides - Link to video
 
-1:05 - 1:20 (15 minutes) What is a ReproPub and why would we want one? (JFB)
+1:05 - 1:20 (15 minutes) What is a ReproPub and why would we want one? (JFB) - Link to slides - Link to video
 
-1:20 - 1:35 (15 Minutes) Introduction to the publication you are going to do (NJ)
+1:20 - 1:35 (15 Minutes) Introduction to the publication you are going to do (NJ) - Link to slides - Link to video
 * ENIGMA has some Parkinson’s Disease (PD) results
 * You have some ‘new’ PD data
 * Do you see what ENIGMA did?
 
-1:35 - 1:50  (15 minutes) What are containers, in general (DJ)
+1:35 - 1:50  (15 minutes) What are containers, in general (DJ) - Link to slides - Link to video
 
-1:50 - 2:05  (15 minutes) How to make a specific “simple container” (containing FSL) (PH)
+1:50 - 2:05  (15 minutes) How to make a specific “simple container” (containing FSL) (PH) - Link to slides - Link to video
 
-2:05 - 2:20  (15 minutes) Brief intro to DataLad (aka DataLad does it all...) (SH)
+2:05 - 2:20  (15 minutes) Brief intro to DataLad (aka DataLad does it all...) (SH) - Link to slides - Link to video
 * installing data 
 * running containers 
 * publishing results
 
-2:20 - 4:30 “Just do it”
+2:20 - 4:30 “Just do it” - Link to notes
 * Here are your command lines
 * Here is the JupyterHub
 * Do it, lots of ReproStaff around to help answer questions or problems
 
 2:30 - 2:45 Break
 
-4:30 - 4:45 (15 minutes) Meta and mega analysis of your results (NJ+DNK)
+4:30 - 4:45 (15 minutes) Meta and mega analysis of your results (NJ+DNK) - Link to slides - Link to video
 
-4:45 - 5:00  (15 minutes) Recap and Summary (SS)
+4:45 - 5:00  (15 minutes) Recap and Summary (SS) - Link to slides - Link to video
 
 
 
