@@ -41,13 +41,25 @@ We need to execute an analysis that supports the hypotheses we are considering.
 4. smaller putamen volumes
 
 We can assess these questions using software that will perform a volumetric analysis of the T1 structural imaging. For an efficient volumetric 
-analysis, we have selectted the FSL software, using the Brain Extraction Tool we can determine total brain volume, using FAST, we can get tissue 
-(gray, white, CSF) volumes, and FIRST yields subcortical structural volumes. The run time for each subject should ba approximately 10 minutes.
+analysis, we have selectted the [FSL software](), using the [Brain Extraction Tool]() we can determine total brain volume, using [FAST](), we can 
+get tissue (gray, white, CSF) volumes, and [FIRST]() yields subcortical structural volumes. The run time for each subject should ba approximately 
+10 minutes.
 
 ## The Container
 It turns out we already have a container that runs the set of FSL tools we need (coloquially know of as the 'simple1' container), it was used in 
 the paper [Ghosh, et al, "A very simple, re-executable neuroimaging publication"](https://f1000research.com/articles/6-124), and is accessible 
 already through the DataLad and ReproNim/Containers infrastructure.
 
+# Standardized Representation of the Results
+The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are packaged in
+in a .json representtion. This .json can be transfered into the NIDM semantically encoded results (.ttl).
 
+# Merging standard results
+The OpenNeuro data set has a NIDM representation. Our newly derived volumetric results also have an associated NIDM representation. These two 
+repreentation can be merged, creating a file that inclludes both the imaging information and the analysis results.
+
+# Querying the results
+
+
+# Publishing the results to the ReproLake
 
