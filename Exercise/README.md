@@ -31,5 +31,23 @@ time to do only a limited amount of data analysis in this course, but also for d
 results in support of both a *meta analysis* amongst our various subsets and a *mega analyis* by combining all of our individual results together. For our
 purposes here, each student/team will get 5 randonly assigned typically developing subjects and 5 subjects with Parkinson's Disease (PD).
 
+# Data Analysis
+We need to execute an analysis that supports the hypotheses we are considering. 
+
+## The Hypotheses
+1. ICV is slightly larger in PD patients
+2. Cortical thickness should also be smaller
+3. larger thalamic volumes (esp in earlier stage PD) 
+4. smaller putamen volumes
+
+We can assess these questions using software that will perform a volumetric analysis of the T1 structural imaging. For an efficient volumetric 
+analysis, we have selectted the FSL software, using the Brain Extraction Tool we can determine total brain volume, using FAST, we can get tissue 
+(gray, white, CSF) volumes, and FIRST yields subcortical structural volumes. The run time for each subject should ba approximately 10 minutes.
+
+## The Container
+It turns out we already have a container that runs the set of FSL tools we need (coloquially know of as the 'simple1' container), it was used in 
+the paper [Ghosh, et al, "A very simple, re-executable neuroimaging publication"](https://f1000research.com/articles/6-124), and is accessible 
+already through the DataLad and ReproNim/Containers infrastructure.
+
 
 
