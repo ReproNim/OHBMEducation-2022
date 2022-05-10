@@ -25,6 +25,22 @@ topic [here]()
 In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the [OpenNeuro ds001907]() collection. 
 [TODO: Add some more about thi dataset]. 
 
+### Commands
+```
+datalad create -c text2git ohbm2022-dnk
+cd ohbm2022-dnk
+
+# Install all desired "components"
+datalad install -d . -s https://github.com/OpenNeuroDatasets/ds001907 sourcedata
+datalad install -d . -s https://github.com/ReproNim/containers containers
+mkdir code
+datalad install -d . -s https://github.com/proj-nuisance/simple_workflow code/simple_workflow
+
+mkdir workdir
+echo workdir > .gitignore
+datalad save -m "ignore workdir" .gitignore
+```
+
 ### Data Subset
 Each student (or student group) will be assigned a subset of the above dataset for their analysis. This is both for practical purposes, as there is 
 time to do only a limited amount of data analysis in this course, but also for didactic purposes, so that we can share (and aggregate) our individual 
@@ -49,6 +65,14 @@ get tissue (gray, white, CSF) volumes, and [FIRST]() yields subcortical structur
 It turns out we already have a container that runs the set of FSL tools we need (coloquially know of as the 'simple1' container), it was used in 
 the paper [Ghosh, et al, "A very simple, re-executable neuroimaging publication"](https://f1000research.com/articles/6-124), and is accessible 
 already through the DataLad and ReproNim/Containers infrastructure.
+
+```
+datalad containers-run \
+  -n containers/repronim-simple-workflow \
+  --input 'sourcedata/sub-RC410[19]/ses-1/anat/sub-*_ses-1_T1w.nii.gz' \
+  code/simple_workflow/run_demo_workflow.py 
+    -o . -w data/workdir --plugin_args 'dict(n_procs=10)' '{inputs}'
+```
 
 # Standardized Representation of the Results
 The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are packaged in
