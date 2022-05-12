@@ -51,8 +51,10 @@ purposes here, each student/team will get 5 randonly assigned typically developi
 We need to execute an analysis that supports the hypotheses we are considering. 
 
 ## The Hypotheses
+Our hypotheses are drawn from the findings of the [ENIGMA Consortium](https://enigma.ini.usc.edu/). Specifically, the 
+[ENIGMA Parkinson's Disease subgroup](https://enigma.ini.usc.edu/ongoing/enigma-parkinsons/) have identified a number of salient structural findings,
+reported in [this paper](https://pubmed.ncbi.nlm.nih.gov/34288137/). From these findings, we have selected the following *a priori* hypotheses:
 1. ICV is slightly larger in PD patients
-2. Cortical thickness should also be smaller
 3. larger thalamic volumes (esp in earlier stage PD) 
 4. smaller putamen volumes
 
