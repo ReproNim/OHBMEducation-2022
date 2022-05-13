@@ -23,7 +23,7 @@ topic [here]()
 
 ## Collect Data
 In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the [OpenNeuro ds001907]() collection. 
-[TODO: Add some more about thi dataset]. 
+[TODO: Add some more about this dataset]. 
 
 ### Commands
 ```
