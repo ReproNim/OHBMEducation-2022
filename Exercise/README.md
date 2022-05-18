@@ -78,7 +78,10 @@ datalad containers-run \
 
 # Standardized Representation of the Results
 The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are packaged in
-in a .json representtion. This .json can be transfered into the NIDM semantically encoded results (.ttl).
+in a .json representtion. This .json can be transfered into the NIDM semantically encoded results (.ttl). This conversion is performed by:
+```
+fslsegstats2nidm -f "simple1.json" -subjid "subject_ID" -o output_nidm.ttl -n nidm_file_to_merge_with.ttl
+```
 
 # Merging standard results
 The OpenNeuro data set has a NIDM representation. Our newly derived volumetric results also have an associated NIDM representation. These two 
