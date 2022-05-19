@@ -40,7 +40,28 @@ On the JupyterHub in your home directory, let's make a directory for your data:
 $ mkdir my_data
 $ cd my_data
 ```
-And now...
+And now get our specially prepared reduced version of the ds001907 dataset:
+```
+$ git clone https://github.com/ReproNim/ds001907-EDU.git my_ds001907-EDU
+```
+You now have the 'complete' datset in the my_ds001907-EDU diretory.
+
+Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
+sub-4601 and sub-4227 as my assigned cases. Then
+1. Remove the sub-* directories that are **not** in your dataset
+2. Remove the lines of the *participants.tsv* file that are not for your subjects
+
+The dataset you cloned had some other files that are not necessary, or that we'll regenerate as part of your processing, so let's remove them:
+```
+$ rm participants.json nidm.ttl demographics.csv
+```
+Let's confirm that we still have a happy BIDS dataset. But, the dataset you cloned was actually a DataLad dataset, so it dosen't actually have the image data contained, and therefore will not validate as BIDS unless the data is actually there. Let's clean up the DataLad aspect of this new data subset and get that data:
+```
+$ save -m "My new dataset" .
+$ datalad get . -r
+```
+Now, this dataset can be passed to the [BIDS validator](https://bids-standard.github.io/bids-validator/).
+
 
 
 
