@@ -40,7 +40,14 @@ On the JupyterHub in your home directory, let's make a directory for your data:
 $ mkdir my_data
 $ cd my_data
 ```
-And now get our specially prepared reduced version of the ds001907 dataset:
+
+Now we are going to 'fork' (make a copy) of our specially prepared reduced version of the ds001907 dataset. To do this, we will
+1. Open a browser
+2. Navigate to the dataset's repo: https://github.com/ReproNim/ds001907-EDU
+3. 
+
+
+And now get 
 ```
 $ git clone https://github.com/ReproNim/ds001907-EDU.git my_ds001907-EDU
 ```
