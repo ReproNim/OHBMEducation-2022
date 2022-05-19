@@ -45,7 +45,8 @@ Now we are going to 'fork' (make a copy) of our specially prepared reduced versi
 1. Open a browser
 2. Navigate to the dataset's repo: https://github.com/ReproNim/ds001907-EDU
 3. 'Fork' this dataset to your own account.
-![picture](../pic/GitHub_fork.png)
+
+![picture](../pics/GitHub_fork.png)
 
 
 And now get 
