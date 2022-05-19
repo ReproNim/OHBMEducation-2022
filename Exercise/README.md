@@ -22,8 +22,27 @@ but those steps are considered to be outside the scope of what we can accomplish
 topic [here]()
 
 ## Collect Data
-In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the [OpenNeuro ds001907]() collection. 
-[TODO: Add some more about this dataset]. 
+In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the 
+[OpenNeuro ds001907](https://openneuro.org/datasets/ds001907/versions/3.0.2) collection. The description of this study can be found at the 
+OpenNeuro website, and this data was published in the following [data paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7217223/). There are 
+46 subjects in this overall dataset (25 healthy aging, 21 Parkinson's Disease).  
+
+### Data Subset
+Each student (or student group) will be assigned a subset of the above dataset for their analysis. This is both for practical purposes, as there is 
+time to do only a limited amount of data analysis in this course, but also for didactic purposes, so that we can share (and aggregate) our individual 
+results in support of both a *meta analysis* amongst our various subsets and a *mega analyis* by combining all of our individual results together. For our
+purposes here, each student/team will get 5 randonly assigned typically developing subjects and 5 subjects with Parkinson's Disease (PD). We know, 
+'your study' will be under-powered, but, frankly, it's still underpowered even if you have 100's of subjects, we'll talk about *that* separately.
+
+#### Let's Do It!
+On the JupyterHub in your home directory, let's make a directory for your data:
+```
+$ mkdir my_data
+$ cd my_data
+```
+And now...
+
+
 
 ### Commands
 ```
@@ -41,11 +60,7 @@ echo workdir > .gitignore
 datalad save -m "ignore workdir" .gitignore
 ```
 
-### Data Subset
-Each student (or student group) will be assigned a subset of the above dataset for their analysis. This is both for practical purposes, as there is 
-time to do only a limited amount of data analysis in this course, but also for didactic purposes, so that we can share (and aggregate) our individual 
-results in support of both a *meta analysis* amongst our various subsets and a *mega analyis* by combining all of our individual results together. For our
-purposes here, each student/team will get 5 randonly assigned typically developing subjects and 5 subjects with Parkinson's Disease (PD).
+
 
 # Data Analysis
 We need to execute an analysis that supports the hypotheses we are considering. 
