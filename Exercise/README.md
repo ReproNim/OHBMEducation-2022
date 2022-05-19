@@ -57,7 +57,7 @@ $ rm participants.json nidm.ttl demographics.csv
 ```
 Let's confirm that we still have a happy BIDS dataset. But, the dataset you cloned was actually a DataLad dataset, so it dosen't actually have the image data contained, and therefore will not validate as BIDS unless the data is actually there. Let's clean up the DataLad aspect of this new data subset and get that data:
 ```
-$ save -m "My new dataset" .
+$ datalad save -m "My new dataset" .
 $ datalad get . -r
 ```
 Now, this dataset can be passed to the [BIDS validator](https://bids-standard.github.io/bids-validator/).
