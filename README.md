@@ -14,7 +14,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 * [Peer Herholtz](https://peerherholz.github.io/) - McGill and ???
 * [Stephan Heunis](https://jsheunis.github.io/) - Institute of Neuroscience and Medicine, Forschungszentrum Jülich
 * [Neda Jahanshad](https://keck.usc.edu/faculty-search/neda-jahanshad/) - Universty of Southern California
-* [Stephen Strouther](TODO)
+* [Stephen Strother](TODO)
 
 # Orginizers (for the blame)
 * [David Kennedy](https://profiles.umassmed.edu/display/130002) - University of assachusetts Chan Medical School
