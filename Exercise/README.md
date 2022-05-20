@@ -83,8 +83,8 @@ Now that we have our dataset, and have it 'published', we can prepare to use thi
 
 ## Setting the Analysis Environment Commands
 ```
-datalad create -c text2git ohbm2022-dnk
-cd ohbm2022-dnk
+datalad create -c text2git my_analysis
+cd my_analysis
 
 # Install all desired "components"
 datalad install -d . -s https://github.com/dnkennedy/my_ds001907-EDU rawdata
