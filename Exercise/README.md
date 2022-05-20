@@ -48,10 +48,9 @@ Now we are going to 'fork' (make a copy) of our specially prepared reduced versi
 
 ![picture](../pics/GitHub_fork.png)
 
-
-And now get 
+Now, on the JupyterHub in your my_data directory, let's clone your fork of this dataset (replace my username (dnkennedy) with your GitHub username): 
 ```
-$ git clone https://github.com/ReproNim/ds001907-EDU.git my_ds001907-EDU
+$ git clone https://github.com/dnkennedy/ds001907-EDU.git my_ds001907-EDU
 ```
 You now have the 'complete' datset in the my_ds001907-EDU diretory.
 
@@ -64,12 +63,17 @@ The dataset you cloned had some other files that are not necessary, or that we'l
 ```
 $ rm participants.json nidm.ttl demographics.csv
 ```
-Let's confirm that we still have a happy BIDS dataset. But, the dataset you cloned was actually a DataLad dataset, so it dosen't actually have the image data contained, and therefore will not validate as BIDS unless the data is actually there. Let's clean up the DataLad aspect of this new data subset and get that data:
+Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is actually a DataLad dataset, so let's clean up the DataLad aspect 
+of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
 ```
 $ datalad save -m "My new dataset" .
-$ datalad get . -r
+$ docker run -ti --rm -v $PWD/my_ds001907-EDU:/data:ro bids/validator /data
 ```
-Now, this dataset can be passed to the [BIDS validator](https://bids-standard.github.io/bids-validator/).
+This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. Congratulations, you have a valid BIDS (and DataLad) dataset.
+
+You can "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
+```
+```
 
 
 
