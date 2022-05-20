@@ -140,7 +140,20 @@ The OpenNeuro data set has a NIDM representation. Our newly derived volumetric r
 repreentation can be merged, creating a file that inclludes both the imaging information and the analysis results.
 
 # Querying the results
+```
+pynidm query -nl nidm.ttl -u /subjects
+pynidm query -nl nidm.ttl -u /dataelements
 
+pynidm query -nl nidm.ttl -u /subjects/sub-RC4101
+
+foreach f (`cat cases.txt` )
+echo $f
+fslsegstats2nidm -f ~/Data/ohbm2022-dnk/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/nidm.ttl
+end
+
+ 1112  pynidm linear-regression -nl nidm.ttl -model "fsl_000030 = age*sex+sex+age+diagnosis" -contrast "diagnosis"
+ 1113  pynidm linear-regression -nl nidm.ttl -model "fsl_000030 = diagnosis" -contrast "diagnosis"
+ ```
 
 # Publishing the results to the ReproLake
 
