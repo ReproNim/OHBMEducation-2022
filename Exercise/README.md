@@ -123,7 +123,7 @@ already through the DataLad and ReproNim/Containers infrastructure.
 ```
 datalad containers-run \
   -n containers/repronim-simple-workflow \
-  --input 'rawdata/sub-RC410[19]/ses-1/anat/sub-*_ses-1_T1w.nii.gz' \
+  --input 'rawdata/sub-RC4*/ses-1/anat/sub-*_ses-1_T1w.nii.gz' \
   code/simple_workflow/run_demo_workflow.py 
     -o . -w data/workdir --plugin_args 'dict(n_procs=10)' '{inputs}'
 ```
