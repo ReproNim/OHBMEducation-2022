@@ -73,6 +73,7 @@ This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.
 
 You can "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
 ```
+
 ```
 
 
