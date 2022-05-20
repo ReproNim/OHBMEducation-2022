@@ -87,7 +87,7 @@ datalad create -c text2git my_analysis
 cd my_analysis
 
 # Install all desired "components"
-datalad install -d . -s https://github.com/dnkennedy/my_ds001907-EDU rawdata
+datalad install -d . -s https://github.com/dnkennedy/ds001907-EDU.git rawdata
 datalad install -d . -s https://github.com/ReproNim/containers containers
 mkdir code
 datalad install -d . -s https://github.com/proj-nuisance/simple_workflow code/simple_workflow
