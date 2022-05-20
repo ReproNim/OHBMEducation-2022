@@ -67,7 +67,7 @@ Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is
 of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
 ```
 $ datalad save -m "My new dataset" .
-$ docker run -ti --rm -v $PWD/my_ds001907-EDU:/data:ro bids/validator /data
+$ docker run -ti --rm -v $PWD/my_ds001907-EDU:/data:ro bids/validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
 This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. Congratulations, you have a valid BIDS (and DataLad) dataset.
 
@@ -78,16 +78,16 @@ Username for 'https://github.com': "Your_GitHub_username"
 Password for 'https://dnkennedy@github.com': "Your_GitHub_token"
 ```
 
+Now that we have our dataset, and have it 'published', we can prepare to use this dataset in our analysis. We will do this in two main steps: 1) setting up our analysis environement, and 2) running the analysis.
 
 
-
-### Commands
+## Setting the Analysis Environment Commands
 ```
 datalad create -c text2git ohbm2022-dnk
 cd ohbm2022-dnk
 
 # Install all desired "components"
-datalad install -d . -s https://github.com/OpenNeuroDatasets/ds001907 sourcedata
+datalad install -d . -s https://github.com/dnkennedy/my_ds001907-EDU rawdata
 datalad install -d . -s https://github.com/ReproNim/containers containers
 mkdir code
 datalad install -d . -s https://github.com/proj-nuisance/simple_workflow code/simple_workflow
@@ -96,7 +96,7 @@ mkdir workdir
 echo workdir > .gitignore
 datalad save -m "ignore workdir" .gitignore
 ```
-
+Of course, use your own GitHub username in place of 'dnkennedy'.
 
 
 # Data Analysis
@@ -123,7 +123,7 @@ already through the DataLad and ReproNim/Containers infrastructure.
 ```
 datalad containers-run \
   -n containers/repronim-simple-workflow \
-  --input 'sourcedata/sub-RC410[19]/ses-1/anat/sub-*_ses-1_T1w.nii.gz' \
+  --input 'rawdata/sub-RC410[19]/ses-1/anat/sub-*_ses-1_T1w.nii.gz' \
   code/simple_workflow/run_demo_workflow.py 
     -o . -w data/workdir --plugin_args 'dict(n_procs=10)' '{inputs}'
 ```
