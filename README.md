@@ -44,7 +44,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 * running containers 
 * publishing results
 
-2:20 - 4:30 “Just do it” - Link to notes
+2:20 - 4:30 “Just do it” - [Exercise](../Exercise/README.md)
 * Here are your command lines
 * Here is the JupyterHub
 * Do it, lots of ReproStaff around to help answer questions or problems
