@@ -55,7 +55,7 @@ git clone https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git my_ds001907-ED
 You now have the 'complete' dataset in the my_ds001907-EDU directory.
 
 Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
-sub-4601 and sub-4227 as my assigned cases. Then
+sub-RC4101 and sub-RC4227 as my assigned cases. Then 
 1. Remove the sub-* directories that are **not** in your dataset
 2. Remove the lines of the *participants.tsv* file that are not for your subjects
 
@@ -147,8 +147,10 @@ to represent our imaging data in the NIDM representation.
 # In the my_analysis directory...
 $ bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
 ```
-You will need to answer a number of questions about your data. Details of an example session are shown [here](). You may get some 'warnings', don't 
-worry about these (including regarding a missing INTERLEX API key). This process generates, in your rawdaya BIDS directory a 'participants.json'
+
+You will need to answer a number of questions about your data. Details of an example session are shown [here](bidsmri2nidm.txt). You may get some 'warnings' don't 
+worry about these (including regarding a missing INTERLEX API key). This process generates, in your rawdata BIDS directory a 'participants.json'
+
 file and the 'my_nidm.ttl' file.
 
 

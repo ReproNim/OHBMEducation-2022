@@ -1,0 +1,153 @@
+# The following is an example from a bidsmri2nidm run
+% bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
+[2022-05-22 09:56:44,626] -  WARNING -       ontquery -      interlex.py:58   - You have not set an API key for the SciCrunch API! InterLexRemote will error if you try to use it.
+
+You will now be asked a series of questions to annotate your term: age
+Please enter a full name to associate with the term [age]:	
+Please enter a definition for this term:	Age at scan
+Please enter the value type for this term from the following list:
+	 1: string - The string datatype represents character strings
+	 2: categorical - A variable that can take on one of a limited number of possible values, assigning each to a nominal category on the basis of some qualitative property.
+	 3: boolean - Binary-valued logic:{true,false}
+	 4: integer - Integer is a number that can be written without a fractional component
+	 5: float - Float consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^24, and e is an integer between -149 and 104, inclusive
+	 6: double - Double consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^53, and e is an integer between -1075 and 970, inclusive
+	 7: duration - Duration represents a duration of time
+	 8: dateTime - Values with integer-valued year, month, day, hour and minute properties, a decimal-valued second property, and a boolean timezoned property.
+	 9: time - Time represents an instant of time that recurs every day
+	 10: date - Date consists of top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the beginning moment of each day (in each timezone)
+	 11: anyURI - anyURI represents a Uniform Resource Identifier Reference (URI). An anyURI value can be absolute or relative, and may have an optional fragment identifier
+Please enter the datatype [1:11]:	4
+Please enter the minimum value [NA]:	
+Please enter the maximum value [NA]:	
+Please enter the units [NA]:	years
+
+*************************************************************************************
+Stored mapping: age ->  
+label: age
+source variable: age
+description: Age at scan
+valueType: http://www.w3.org/2001/XMLSchema#integer
+hasUnit: years
+minimumValue: 
+maximumValue: 
+---------------------------------------------------------------------------------------
+
+Concept Association
+Query String: age 
+
+NIDM-Terms Concepts:
+1: Label: Date 	 Definition: Date value for this name-value Item. 	 URL: http://uri.interlex.org/ilx_0383109
+2: Label: Age 	 Definition: A time quality inhering in a bearer by virtue of how long it has existed. 	 URL: http://uri.interlex.org/ilx_0100400
+3: Label: language 	 Definition: The mental ability to encode and decode information, and translate this information into verbal, acoustic and visual representations, according to a set of rules that are common across a population. 	 URL: http://cognitiveatlas.org/concept/json/trm_4a3fd79d0a769/
+
+4: Broaden Search (includes interlex, cogatlas, and nidm ontology) 
+5: Change query string from: "age"
+6: No concept needed for this variable
+---------------------------------------------------------------------------------------
+Please select an option (1:6) from above: 	2
+
+Concept annotation added for source variable: age
+WARNING: WIP: Data element not submitted to InterLex.  
+
+You will now be asked a series of questions to annotate your term: sex
+Please enter a full name to associate with the term [sex]:	
+Please enter a definition for this term:	Sex of participand assigned at birth
+Please enter the value type for this term from the following list:
+	 1: string - The string datatype represents character strings
+	 2: categorical - A variable that can take on one of a limited number of possible values, assigning each to a nominal category on the basis of some qualitative property.
+	 3: boolean - Binary-valued logic:{true,false}
+	 4: integer - Integer is a number that can be written without a fractional component
+	 5: float - Float consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^24, and e is an integer between -149 and 104, inclusive
+	 6: double - Double consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^53, and e is an integer between -1075 and 970, inclusive
+	 7: duration - Duration represents a duration of time
+	 8: dateTime - Values with integer-valued year, month, day, hour and minute properties, a decimal-valued second property, and a boolean timezoned property.
+	 9: time - Time represents an instant of time that recurs every day
+	 10: date - Date consists of top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the beginning moment of each day (in each timezone)
+	 11: anyURI - anyURI represents a Uniform Resource Identifier Reference (URI). An anyURI value can be absolute or relative, and may have an optional fragment identifier
+Please enter the datatype [1:11]:	1
+Please enter the minimum value [NA]:	
+Please enter the maximum value [NA]:	
+Please enter the units [NA]:	
+
+*************************************************************************************
+Stored mapping: sex ->  
+label: sex
+source variable: sex
+description: Sex of participand assigned at birth
+valueType: http://www.w3.org/2001/XMLSchema#string
+hasUnit: 
+minimumValue: 
+maximumValue: 
+---------------------------------------------------------------------------------------
+
+Concept Association
+Query String: sex 
+
+NIDM-Terms Concepts:
+1: Label: SEX 	 Definition: gender  	 URL: http://uri.interlex.org/ilx_0738439
+
+2: Broaden Search (includes interlex, cogatlas, and nidm ontology) 
+3: Change query string from: "sex"
+4: No concept needed for this variable
+---------------------------------------------------------------------------------------
+Please select an option (1:4) from above: 	1
+
+Concept annotation added for source variable: sex
+WARNING: WIP: Data element not submitted to InterLex.  
+
+You will now be asked a series of questions to annotate your term: diagnosis
+Please enter a full name to associate with the term [diagnosis]:	
+Please enter a definition for this term:	Diagnosis of participant
+Please enter the value type for this term from the following list:
+	 1: string - The string datatype represents character strings
+	 2: categorical - A variable that can take on one of a limited number of possible values, assigning each to a nominal category on the basis of some qualitative property.
+	 3: boolean - Binary-valued logic:{true,false}
+	 4: integer - Integer is a number that can be written without a fractional component
+	 5: float - Float consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^24, and e is an integer between -149 and 104, inclusive
+	 6: double - Double consists of the values m × 2^e, where m is an integer whose absolute value is less than 2^53, and e is an integer between -1075 and 970, inclusive
+	 7: duration - Duration represents a duration of time
+	 8: dateTime - Values with integer-valued year, month, day, hour and minute properties, a decimal-valued second property, and a boolean timezoned property.
+	 9: time - Time represents an instant of time that recurs every day
+	 10: date - Date consists of top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the beginning moment of each day (in each timezone)
+	 11: anyURI - anyURI represents a Uniform Resource Identifier Reference (URI). An anyURI value can be absolute or relative, and may have an optional fragment identifier
+Please enter the datatype [1:11]:	1
+Please enter the minimum value [NA]:	
+Please enter the maximum value [NA]:	
+Please enter the units [NA]:	
+
+*************************************************************************************
+Stored mapping: diagnosis ->  
+label: diagnosis
+source variable: diagnosis
+description: Diagnosis of participant
+valueType: http://www.w3.org/2001/XMLSchema#string
+hasUnit: 
+minimumValue: 
+maximumValue: 
+---------------------------------------------------------------------------------------
+
+Concept Association
+Query String: diagnosis 
+
+NIDM-Terms Concepts:
+1: Label: Diagnosis, Psychiatric 	 Definition: Psychiatric-based diagnosis 	 URL: http://uri.interlex.org/ilx_0497879
+2: Label: Diagnosis 	 Definition: The representation of a conclusion of a diagnostic process. 	 URL: http://uri.interlex.org/ilx_0778153
+3: Label: mania (Diagnosis) 	 Definition: current diagnosis of mania. 	 URL: http://uri.interlex.org/ilx_0148913
+
+4: Broaden Search (includes interlex, cogatlas, and nidm ontology) 
+5: Change query string from: "diagnosis"
+6: No concept needed for this variable
+---------------------------------------------------------------------------------------
+Please select an option (1:6) from above: 	1
+
+Concept annotation added for source variable: diagnosis
+WARNING: WIP: Data element not submitted to InterLex.  
+WARNING:root:Cannot find T1w.json file...looking for session-specific one
+WARNING:root:Cannot find session-specific T1w.json file which is required in the BIDS spec..continuing anyway
+WARNING:root:Cannot find T1w.json file...looking for session-specific one
+WARNING:root:Cannot find session-specific T1w.json file which is required in the BIDS spec..continuing anyway
+WARNING:root:Cannot find T1w.json file...looking for session-specific one
+WARNING:root:Cannot find session-specific T1w.json file which is required in the BIDS spec..continuing anyway
+WARNING:root:Cannot find T1w.json file...looking for session-specific one
+WARNING:root:Cannot find session-specific T1w.json file which is required in the BIDS spec..continuing anyway
