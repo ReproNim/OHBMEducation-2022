@@ -179,19 +179,31 @@ Writing Augmented NIDM file...
 and your volues should now be included in you my_nidm.ttl file!
 
 # Querying the results
+Now, what can we do with our results? We can interogate the my_nidm.ttl file for the contents that is has. For example, what subjects are in this data file?
 ```
-pynidm query -nl nidm.ttl -u /subjects
-pynidm query -nl nidm.ttl -u /dataelements
+pynidm query -nl rawdata/my_nidm.ttl -u /subjects
+```
+What data elements are in this file?
+```
+pynidm query -nl rawdata/my_nidm.ttl -u /dataelements
+```
+What do we know about a particular subject?
+```
+pynidm query -nl rawdata/my_nidm.ttl -u /subjects/sub-RC4101
+```
 
-pynidm query -nl nidm.ttl -u /subjects/sub-RC4101
+## Linear Regression
+Within the my_nidm.ttl we can also perform simple statistical analyses. Returning to our hypotheses, our nidm file knows about age, sex, diagnosis, and the regional brain volumes.
+For our anatomic regions, we do need to recall the codes that are assigned: brain volume (TODO), thalamus (fsl_000016,fsl_000030), putamen (fsl_000014, fsl_000028), for left and right, respectively. 
+So, for any of these, we can use *pynidm* to run a linear regression for a specific model. For example, for Right Thalamus, a cpmprehensive 
+model that includes tems for age, sex, and an age by sex interaction to predict diagnosis would look like: 
 
-foreach f (`cat cases.txt` )
-echo $f
-fslsegstats2nidm -f ~/Data/ohbm2022-dnk/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/nidm.ttl
-end
-
- 1112  pynidm linear-regression -nl nidm.ttl -model "fsl_000030 = age*sex+sex+age+diagnosis" -contrast "diagnosis"
- 1113  pynidm linear-regression -nl nidm.ttl -model "fsl_000030 = diagnosis" -contrast "diagnosis"
+```
+pynidm linear-regression -nl rawdata/my_nidm.ttl -model "fsl_000030 = age*sex+sex+age+diagnosis" -contrast "diagnosis"
+```
+A simpler model that just looks at Right Thalamus predicting diagnosis would be:
+```
+pynidm linear-regression -nl rawdata/my_nidm.ttl -model "fsl_000030 = diagnosis" -contrast "diagnosis"
  ```
 
 # Publishing the results to the ReproLake
