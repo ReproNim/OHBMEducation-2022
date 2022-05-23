@@ -55,7 +55,7 @@ $ git clone https://github.com/dnkennedy/ds001907-EDU.git my_ds001907-EDU
 You now have the 'complete' datset in the my_ds001907-EDU diretory.
 
 Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
-sub-4601 and sub-4227 as my assigned cases. Then
+sub-RC4101 and sub-RC4227 as my assigned cases. Then 
 1. Remove the sub-* directories that are **not** in your dataset
 2. Remove the lines of the *participants.tsv* file that are not for your subjects
 
