@@ -148,15 +148,36 @@ to represent our imaging data in the NIDM representation.
 $ bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
 ```
 
-You will need to answer a number of questions about your data. Details of an example session are shown [here](bidsmri2nidm.txt). You may get some 'warnings' don't 
-worry about these (including regarding a missing INTERLEX API key). This process generates, in your rawdata BIDS directory a 'participants.json' file and the 'my_nidm.ttl' file.
+You will need to answer a number of questions about your data. Details of an example session are shown [here](bidsmri2nidm.txt). 
+You may get some 'warnings' don't worry about these (including regarding a missing INTERLEX API key). This process generates, in your 
+rawdata BIDS directory a 'participants.json' file and the 'my_nidm.ttl' file.
 
 
 ## Standardized Representation of the Results
-The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are packaged in a .json representation. This .json can be transferred into the NIDM semantically encoded results (.ttl). This conversion is performed by:
+The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are 
+packaged in a .json representation. This .json can be transferred into the NIDM semantically encoded results (.ttl). 
+First, lets generate a listing of your cases:
 ```
-fslsegstats2nidm -f "simple1.json" -subjid "subject_ID" -o output_nidm.ttl -n nidm_file_to_merge_with.ttl
+ls -d1 rawdata/sub-* | xargs -n 1 basename > cases.txt
 ```
+cases.txt now lists your cases. Next, looping over all of your cases, let's convert the .json into NIDM and merge it into your main NIDM representation:
+```
+foreach f (`cat cases.txt`)
+echo $f
+fslsegstats2nidm -f $PWD/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl
+end
+```
+This should generate the following output:
+```
+sub-RC4101
+Found subject ID: sub-RC4101 in NIDM file (agent: http://iri.nidash.org/c485338e-d9d7-11ec-8cef-acde48001122)
+Writing Augmented NIDM file...
+sub-RC4227
+Found subject ID: sub-RC4227 in NIDM file (agent: http://iri.nidash.org/d4a9e7ce-d9d7-11ec-8cef-acde48001122)
+Writing Augmented NIDM file...
+```
+and your volues should now be included in you my_nidm.ttl file!
+
 
 # Merging standard results
 The OpenNeuro data set has a NIDM representation. Our newly derived volumetric results also have an associated NIDM representation. These two 
