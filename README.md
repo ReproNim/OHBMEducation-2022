@@ -39,7 +39,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 
 1:50 - 2:05  (15 minutes) How to make a specific “simple container” (containing FSL) (PH) - Link to slides - Link to video
 
-2:05 - 2:20  (15 minutes) Brief intro to DataLad (aka DataLad does it all...) (SH) - Link to slides - Link to video
+2:05 - 2:20  (15 minutes) Brief intro to DataLad (aka DataLad does it all...) (SH) - [Link to slides](https://jsheunis.github.io/ohbm-2022/talks/ohbm-2022-educational-jsheunis.html#/) - [Link to video](https://www.youtube.com/watch?v=s1zrB_sDbDU)
 * installing data 
 * running containers 
 * publishing results
