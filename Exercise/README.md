@@ -394,6 +394,18 @@ Notes:
 </details>
 
 
-
 # Publishing the results to the ReproLake
+We have a StarDog graph database. You can 'publish' your results to this accessible database with the following command:
+```
+TODO
+```
+
+# Publish the Complete Package
+
+# Write Your Paper
+In your GitHub repo, create a document that describes your re-executable publication. Make sure to indicate the raw data that you used, 
+the analysis workflow and processing script you used, the complete results, and the statistical analysis. Indicate how someoneelse can 
+rerun your analysis.
+
+
 
