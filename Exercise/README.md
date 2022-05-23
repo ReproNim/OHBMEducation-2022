@@ -204,7 +204,196 @@ pynidm linear-regression -nl rawdata/my_nidm.ttl -model "fsl_000030 = age*sex+se
 A simpler model that just looks at Right Thalamus predicting diagnosis would be:
 ```
 pynidm linear-regression -nl rawdata/my_nidm.ttl -model "fsl_000030 = diagnosis" -contrast "diagnosis"
- ```
+```
+
+<details>
+  <summary>Click to expand!</summary>
+  
+  ```javascript
+  ***********************************************************************************************************
+Your command was: pynidm linear-regression -nl rawdata/my_nidm.ttl -model "fsl_000030 = age*sex+sex+age+diagnosis" -contrast "diagnosis" 
+
+Your data set has less than 20 points, which means the model calculated may not be accurate due to a lack of data. 
+This means you cannot regularize the data either.
+Continue anyways? Y or N: Y
+        age  fsl_000030  diagnosis  sex
+0  66.28288      9069.0          0    0
+1  69.04774      8142.0          1    0
+
+***********************************************************************************************************
+
+Model Results: 
+fsl_000030 ~ diagnosis + age + sex + age*sex
+
+***********************************************************************************************************
+
+
+
+Treatment (Dummy) Coding: Dummy coding compares each level of the categorical variable to a base reference level. The base reference level is the value of the intercept.
+With contrast (treatment coding)
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fsl_000030   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 23 May 2022   Prob (F-statistic):                nan
+Time:                        08:04:01   Log-Likelihood:                 49.724
+No. Observations:                   2   AIC:                            -95.45
+Df Residuals:                       0   BIC:                            -98.06
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+================================================================================================
+                                   coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                       56.4011        inf          0        nan         nan         nan
+C(diagnosis, Treatment)[T.1] -1302.9428        inf         -0        nan         nan         nan
+age                            135.9717        inf          0        nan         nan         nan
+sex                                   0        nan        nan        nan         nan         nan
+age:sex                               0        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.000
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.333
+Skew:                           0.000   Prob(JB):                        0.846
+Kurtosis:                       1.000   Cond. No.                         138.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+
+
+Simple Coding: Like Treatment Coding, Simple Coding compares each level to a fixed reference level. However, with simple coding, the intercept is the grand mean of all the levels of the factors.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fsl_000030   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 23 May 2022   Prob (F-statistic):                nan
+Time:                        08:04:01   Log-Likelihood:                 50.534
+No. Observations:                   2   AIC:                            -97.07
+Df Residuals:                       0   BIC:                            -99.68
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+================================================================================================
+                                   coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                       54.0233        inf          0        nan         nan         nan
+C(diagnosis, Simple)[Simp.0] -1276.4203        inf         -0        nan         nan         nan
+age                            126.3790        inf          0        nan         nan         nan
+sex                                   0        nan        nan        nan         nan         nan
+age:sex                               0        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.000
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.333
+Skew:                           0.000   Prob(JB):                        0.846
+Kurtosis:                       1.000   Cond. No.                         135.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+
+
+Sum (Deviation) Coding: Sum coding compares the mean of the dependent variable for a given level to the overall mean of the dependent variable over all the levels.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fsl_000030   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 23 May 2022   Prob (F-statistic):                nan
+Time:                        08:04:01   Log-Likelihood:                 49.133
+No. Observations:                   2   AIC:                            -94.27
+Df Residuals:                       0   BIC:                            -96.88
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                 14.9315        inf          0        nan         nan         nan
+C(diagnosis, Sum)[S.0]   639.0088        inf          0        nan         nan         nan
+age                      126.9568        inf          0        nan         nan         nan
+sex                             0        nan        nan        nan         nan         nan
+age:sex                         0        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   0.138
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.333
+Skew:                           0.000   Prob(JB):                        0.846
+Kurtosis:                       1.000   Cond. No.                         67.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+
+
+Backward Difference Coding: In backward difference coding, the mean of the dependent variable for a level is compared with the mean of the dependent variable for the prior level.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fsl_000030   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 23 May 2022   Prob (F-statistic):                nan
+Time:                        08:04:01   Log-Likelihood:                 50.534
+No. Observations:                   2   AIC:                            -97.07
+Df Residuals:                       0   BIC:                            -99.68
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                  54.0233        inf          0        nan         nan         nan
+C(diagnosis, Diff)[D.0] -1276.4203        inf         -0        nan         nan         nan
+age                       126.3790        inf          0        nan         nan         nan
+sex                              0        nan        nan        nan         nan         nan
+age:sex                          0        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.000
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.333
+Skew:                           0.000   Prob(JB):                        0.846
+Kurtosis:                       1.000   Cond. No.                         135.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+
+
+Helmert Coding: Our version of Helmert coding is sometimes referred to as Reverse Helmert Coding. The mean of the dependent variable for a level is compared to the mean of the dependent variable over all previous levels. Hence, the name ‘reverse’ being sometimes applied to differentiate from forward Helmert coding.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fsl_000030   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 23 May 2022   Prob (F-statistic):                nan
+Time:                        08:04:01   Log-Likelihood:                 49.133
+No. Observations:                   2   AIC:                            -94.27
+Df Residuals:                       0   BIC:                            -96.88
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================
+                                 coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------
+Intercept                     14.9315        inf          0        nan         nan         nan
+C(diagnosis, Helmert)[H.1]  -639.0088        inf         -0        nan         nan         nan
+age                          126.9568        inf          0        nan         nan         nan
+sex                                 0        nan        nan        nan         nan         nan
+age:sex                             0        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   0.138
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.333
+Skew:                           0.000   Prob(JB):                        0.846
+Kurtosis:                       1.000   Cond. No.                         67.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+
+  
+  ```
+</details>
+
+
 
 # Publishing the results to the ReproLake
 
