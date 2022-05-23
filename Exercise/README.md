@@ -154,7 +154,7 @@ rawdata BIDS directory a 'participants.json' file and the 'my_nidm.ttl' file.
 
 
 ## Standardized Representation of the Results
-The imaging results of the analysis are included in the BIDS/Derivities framework. The volumetric results for each structure measured are 
+The volumetric results for each structure measured are 
 packaged in a .json representation. This .json can be transferred into the NIDM semantically encoded results (.ttl). 
 First, lets generate a listing of your cases:
 ```
@@ -177,11 +177,6 @@ Found subject ID: sub-RC4227 in NIDM file (agent: http://iri.nidash.org/d4a9e7ce
 Writing Augmented NIDM file...
 ```
 and your volues should now be included in you my_nidm.ttl file!
-
-
-# Merging standard results
-The OpenNeuro data set has a NIDM representation. Our newly derived volumetric results also have an associated NIDM representation. These two 
-representations can be merged, creating a file that includes both the imaging information and the analysis results.
 
 # Querying the results
 ```
