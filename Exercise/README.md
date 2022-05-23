@@ -149,7 +149,7 @@ to represent our imaging data in the NIDM representation.
 $ bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
 ```
 You will need to answer a number of questions about your data. Details of an example session are shown [here](bidsmri2nidm.txt). You may get some 'warnings' don't 
-worry about these (including regarding a missing INTERLEX API key). This process generates, in your rawdaya BIDS directory a 'participants.json'
+worry about these (including regarding a missing INTERLEX API key). This process generates, in your rawdata BIDS directory a 'participants.json'
 file and the 'my_nidm.ttl' file.
 
 
