@@ -407,15 +407,31 @@ have generated new data that does not have an alternate location. So, when we pu
 this newly generated imaging data. For this exmple, we will use Git LFS, whereby a GitHub subscription allows up to 1GB of free storage and up 
 to 1GB of bandwidth monthly. The following steps are summarized from the [DataLad Handbook here](http://handbook.datalad.org/en/latest/basics/101-139-gitlfs.html).
 
-In order to store annexed dataset contents on GitHub, we need first to create a repository on GitHub:
+In order to store annexed dataset contents on GitHub, we need first to create a so-called "sibling" of our DataLad dataset:
 ```
 $ datalad create-sibling-github my_experiment
 ```
-And then initialize a special remote of type git-lfs, pointing to the same GitHub repository:
+
+And then we initialize a special remote of type `git-lfs`, pointing to the same GitHub repository:
 ```
 $ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no
 ```
-With this single step it becomes possible to transfer the entire dataset to the same GitHub repository:
+
+By running `datalad siblings` from the dataset directory, it will be evident that we now have two siblings of the original DataLad dataset, for example:
+```
+$ datalad siblings
+.: here(+) [git]
+.: github(-) [https://github.com/$Your_GitHub_Username/my_experiment.git (git)]
+.: github-lfs(+) [git]
+```
+
+In order to link the annexed contents in the LFS special remote to the GitHub sibling such that we can update both simultaneously, we need to configure a publication dependency using the `publish-depends <sibling>` option. We'll set it such that the `github` sibling depends on the `github-lfs` sibling.
+
+```
+datalad siblings github --publish-depends github-lfs
+```
+
+Finally, with this single step it becomes possible to transfer the entire dataset, including annexed file content, to the same GitHub repository:
 ```
 $ datalad push --to=github
 ```
