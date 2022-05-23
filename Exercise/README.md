@@ -139,8 +139,8 @@ First, let's get all of our *stuff* represented in a more completly standard rep
 Our raw imaging data is in pretty good shape. It is in BIDS already (although we did have a warning about not having a participants.json 'dictionary).
 An issue with BIDS, however, is that even compliant BIDS are not completely 'self described'. The "diagnosis" field, for example, could have been 
 called anything (dx, DIAG, condition, etc.), and therefore 'someone' would still need to tell you what this field actually is, if they handed you 
-this file. [NIDM]() was developed to provide a standardised way to represent what our various data fields 'mean'. For 'diagnosis', to continue the 
-example, I could associate that field with a reference to a definition of what we mean for this field, like this [link](). So, our next step is 
+this file. [NIDM](http://nidm.nidash.org/) was developed to provide a standardised way to represent what our various data fields 'mean'. For 'diagnosis', to continue the 
+example, I could associate that field with a reference to a definition of what we mean for this field, like this [link](TODO). So, our next step is 
 to represent our imaging data in the NIDM representation.
 
 ```
