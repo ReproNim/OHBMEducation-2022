@@ -401,6 +401,27 @@ TODO
 ```
 
 # Publish the Complete Package
+There are numerous places you can now share this complete dataset. GitHub does not 'like' large binary datasets, all the imaging data we have
+been using so far actually, through the magic of 'git-annex' actually resides at the AWS S3 data hosting of OpenNeuro. In our processing, we 
+have generated new data that does not have an alternate location. So, when we publish this complete data, we need to allow for the storage of 
+this newly generated imaging data. For this exmple, we will use Git LFS, whereby a GitHub subscription allows up to 1GB of free storage and up 
+to 1GB of bandwidth monthly. The following steps are summarized from the [DataLad Handbook here](http://handbook.datalad.org/en/latest/basics/101-139-gitlfs.html).
+
+In order to store annexed dataset contents on GitHub, we need first to create a repository on GitHub:
+```
+$ datalad create-sibling-github my_experiment
+```
+And then initialize a special remote of type git-lfs, pointing to the same GitHub repository:
+```
+$ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no
+```
+With this single step it becomes possible to transfer the entire dataset to the same GitHub repository:
+```
+$ datalad push --to=github
+```
+
+Others can now fork or clone this repository, see your complete process, and re-run the analysis to exactely replicate your results, 
+and, importantly, extend the exact same analysis to other data.
 
 # Write Your Paper
 In your GitHub repo, create a document that describes your re-executable publication. Make sure to indicate the raw data that you used, 
