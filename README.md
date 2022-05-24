@@ -11,7 +11,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 # Instructors (for the credit)
 * [Julie Bates](https://profiles.umassmed.edu/display/11661391) - University of assachusetts Chan Medical School
 * [Dorota Jarecka](https://gablab.mit.edu/team/jarecka-dorota/) - MIT
-* [Peer Herholtz](https://peerherholz.github.io/) - McGill and ???
+* [Peer Herholz](https://peerherholz.github.io/) - McGill and ???
 * [Stephan Heunis](https://jsheunis.github.io/) - Institute of Neuroscience and Medicine, Forschungszentrum Jülich
 * [Neda Jahanshad](https://keck.usc.edu/faculty-search/neda-jahanshad/) - Universty of Southern California
 * [Stephen Strother](TODO)
