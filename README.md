@@ -26,8 +26,7 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 
 
 # Tentative Schedule
-1:00 - 1:05 (5 minutes)   Introduction to the course (DNK/JBP) - [Link to slides]
-(https://docs.google.com/presentation/d/1-PXARrXyHaMOStJNLLt47pPA26EdA1pDnAc9dLB0aik/edit?usp=sharing) - Link to video
+1:00 - 1:05 (5 minutes)   Introduction to the course (DNK/JBP) - [Link to slides](https://docs.google.com/presentation/d/1-PXARrXyHaMOStJNLLt47pPA26EdA1pDnAc9dLB0aik/edit?usp=sharing) - Link to video
 
 1:05 - 1:20 (15 minutes) What is a ReproPub and why would we want one? (JFB) - Link to slides - Link to video
 
