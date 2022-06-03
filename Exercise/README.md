@@ -428,7 +428,7 @@ $ datalad siblings
 In order to link the annexed contents in the LFS special remote to the GitHub sibling such that we can update both simultaneously, we need to configure a publication dependency using the `publish-depends <sibling>` option. We'll set it such that the `github` sibling depends on the `github-lfs` sibling.
 
 ```
-datalad siblings github --publish-depends github-lfs
+datalad siblings configure -s github --publish-depends github-lfs
 ```
 
 Finally, with this single step it becomes possible to transfer the entire dataset, including annexed file content, to the same GitHub repository:
