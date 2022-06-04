@@ -414,7 +414,7 @@ $ datalad create-sibling-github my_experiment
 
 And then we initialize a special remote of type `git-lfs`, pointing to the same GitHub repository:
 ```
-$ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no
+$ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no autoenable=true
 ```
 
 By running `datalad siblings` from the dataset directory, it will be evident that we now have two siblings of the original DataLad dataset, for example:
