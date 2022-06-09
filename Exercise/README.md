@@ -177,6 +177,16 @@ First, lets generate a listing of your cases:
 ls -d1 rawdata/sub-* | xargs -n 1 basename > cases.txt
 ```
 cases.txt now lists your cases. Next, looping over all of your cases, let's convert the .json into NIDM and merge it into your main NIDM representation:
+***BASH***
+```
+for i in `cat cases.txt`; 
+do   
+    echo "Working on $i file..."; 
+    fslsegstats2nidm -f $PWD/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl;
+done
+```
+
+***other shells***
 ```
 foreach f (`cat cases.txt`)
 echo $f
