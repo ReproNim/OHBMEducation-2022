@@ -78,9 +78,14 @@ Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is
 of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
 ```
 datalad save -m "My new dataset" .
+singularity exec --bind $PWD/ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
+```
+IF Docker were available to us, this would have been the syntax of the validation command:
+```
 docker run -ti --rm -v $PWD:/data:ro bids/validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
-This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. Congratulations, you have a valid BIDS (and DataLad) dataset.
+This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. You can ignore the warnings about 
+"...Tabular file contains custom columns..." for now. Congratulations, you have a valid BIDS (and DataLad) dataset.
 
 You can "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
 ```
