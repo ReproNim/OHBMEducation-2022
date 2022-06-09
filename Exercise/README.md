@@ -182,7 +182,7 @@ cases.txt now lists your cases. Next, looping over all of your cases, let's conv
 for i in `cat cases.txt`; 
 do   
     echo "Working on $i file..."; 
-    fslsegstats2nidm -f $PWD/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl;
+    fslsegstats2nidm -f $PWD/${i}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl;
 done
 ```
 
