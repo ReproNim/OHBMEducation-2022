@@ -177,6 +177,10 @@ First, lets generate a listing of your cases:
 ls -d1 rawdata/sub-* | xargs -n 1 basename > cases.txt
 ```
 cases.txt now lists your cases. Next, looping over all of your cases, let's convert the .json into NIDM and merge it into your main NIDM representation:
+
+***At the moment (6/9/22) this will fail, since we don't have fslsegstats2nidm installed globally. IF you are checking this, you can install it 
+for yourself by ```pip install https://github.com/ReproNim/fsl_seg_to_nidm/archive/refs/heads/master.zip```***
+
 ***BASH***
 ```
 for i in `cat cases.txt`; 
@@ -202,7 +206,7 @@ sub-RC4227
 Found subject ID: sub-RC4227 in NIDM file (agent: http://iri.nidash.org/d4a9e7ce-d9d7-11ec-8cef-acde48001122)
 Writing Augmented NIDM file...
 ```
-and your volues should now be included in you my_nidm.ttl file!
+and your volumes should now be included in you my_nidm.ttl file!
 
 # Querying the results
 Now, what can we do with our results? We can interogate the my_nidm.ttl file for the contents that is has. For example, what subjects are in this data file?
