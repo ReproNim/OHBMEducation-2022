@@ -6,6 +6,17 @@ and environment pre-set. This eliminates the hassle of making all this work on e
 may not be able to replicate this example 'at home' unless/until you solve the software prerequisites on your own computational platform.
 That's OK, ***ReproNim*** is here to help after the course with your own 'home' computational platform.
 
+## Meet your ReproHub
+The ReproHub is hosted at a URL that we will give you in class. Point your browser to this url. You will use your GitHub authorization in order to log in.
+Once you are in the site, you will see the 'Launcher' from where you can 'launch' many ships. For now, we'll want a command line "terminal". 
+Click that icon to get started.
+
+Amongst the first things we need to do on this platform is let *git* know about who you are. To do this:
+
+Set your username: ```git config --global user.name "FIRST_NAME LAST_NAME"```
+
+Set your email address: ```git config --global user.email "MY_NAME@example.com"```
+
 # The Steps
 We will do our re-executable publication in a sequence of steps that are designed to accomplish all the necessary tasks in the timeframe allocated by our
 course.
