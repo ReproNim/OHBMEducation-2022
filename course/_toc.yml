@@ -1,0 +1,10 @@
+root: index
+format: jb-book
+chapters:
+- file: dei
+- file: overview
+- file: setup
+- file: outline
+- file: materials
+- file: exercise
+- file: CoC

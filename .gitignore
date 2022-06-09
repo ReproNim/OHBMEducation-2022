@@ -1,0 +1,5 @@
+# ignore local build files
+course/_build/*
+
+# ignore macos .DS_Store files
+.DS_Store
