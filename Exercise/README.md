@@ -430,9 +430,12 @@ Notes:
 
 # Publishing the results to the ReproLake
 We have a StarDog graph database. You can 'publish' your results to this accessible database with the following command:
+
+This will be something like the following (but is still under TODO debugging and planning):
 ```
-TODO
+curl --location --request POST "https://stardog.scicrunch.io:5821/Repronim_OHBM_2022?default" --header "Content-Type: text/turtle" --user repro-student:XXXX --data-binary @/home/jovyan/my_analysis/rawdata/my_nidm.ttl
 ```
+where the XXXX password will be provided in class.
 
 # Publish the Complete Package
 There are numerous places you can now share this complete dataset. GitHub does not 'like' large binary datasets, all the imaging data we have
