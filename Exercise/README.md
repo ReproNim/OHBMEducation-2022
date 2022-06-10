@@ -17,6 +17,8 @@ Set your username: ```git config --global user.name "FIRST_NAME LAST_NAME"```
 
 Set your email address: ```git config --global user.email "MY_NAME@example.com"```
 
+Teach git to remember you, to save typing later on: ```git config credential.helper 'cache --timeout=3600' ```
+
 # The Steps
 We will do our re-executable publication in a sequence of steps that are designed to accomplish all the necessary tasks in the timeframe allocated by our
 course.
