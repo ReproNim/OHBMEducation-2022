@@ -448,6 +448,10 @@ In order to store annexed dataset contents on GitHub, we need first to create a 
 ```
 datalad create-sibling-github my_experiment
 ```
+To avoid a possible shortcoming in DataLad GitHub interaction, we do the following first:
+```
+datalad push --to=github
+```
 
 And then we initialize a special remote of type `git-lfs`, pointing to the same GitHub repository:
 ```
