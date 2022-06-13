@@ -3,7 +3,10 @@ Repo for the [2022 OHBM Education](https://www.humanbrainmapping.org/i4a/pages/i
 
 **When**: June 19th, 1pm-5pm local time
 
-**Where**: Glasgow, Scotland
+**Where**: Glasgow, Scotland, Scottish Event Campus (SEC), Alsh Room
+
+
+![picture](../pics/SEC_Alsh.png)
 
 # Objective
 The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-executable publication.
