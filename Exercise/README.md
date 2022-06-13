@@ -74,7 +74,7 @@ sub-RC4101 and sub-RC4227 as my assigned cases. Then
 
 The dataset you cloned had some other files that are not necessary, or that we'll regenerate as part of your processing, so let's remove them:
 ```
-rm participants.json nidm.ttl demographics.csv
+rm nidm.ttl demographics.csv
 ```
 Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is actually a DataLad dataset, so let's clean up the DataLad aspect 
 of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
