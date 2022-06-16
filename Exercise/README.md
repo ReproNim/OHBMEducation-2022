@@ -80,6 +80,7 @@ Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is
 of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
 ```
 datalad save -m "My new dataset" .
+```
 
 And then actually run the validator (using singularity):
 ```
