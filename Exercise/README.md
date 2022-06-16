@@ -17,8 +17,6 @@ Set your username: ```git config --global user.name "FIRST_NAME LAST_NAME"```
 
 Set your email address: ```git config --global user.email "MY_NAME@example.com"```
 
-Teach git to remember you, to save typing later on: ```git config credential.helper 'cache --timeout=3600' ```
-
 # The Steps
 We will do our re-executable publication in a sequence of steps that are designed to accomplish all the necessary tasks in the timeframe allocated by our
 course.
@@ -67,6 +65,8 @@ git clone https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git my_ds001907-ED
 ```
 You now have the 'complete' dataset in the my_ds001907-EDU directory.
 
+Now, you can teach git to remember you, to save typing later on: ```git config credential.helper 'cache --timeout=3600' ```
+
 Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
 sub-RC4101 and sub-RC4227 as my assigned cases. Then 
 1. Remove the sub-* directories that are **not** in your dataset
@@ -80,7 +80,11 @@ Let's confirm that we still have a happy BIDS dataset. The dataset you cloned is
 of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
 ```
 datalad save -m "My new dataset" .
-singularity exec --bind $PWD/ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
+
+And then actually run the validator (using singularity):
+```
+cd ..
+singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
 IF Docker were available to us, this would have been the syntax of the validation command:
 ```
