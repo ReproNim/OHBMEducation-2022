@@ -27,6 +27,9 @@ shared location. A GitHub repo is FAIR: Findable, Accessible, Interoperable and 
 we really should think of this as a pre-print of our 'publication'. Were this an actual publication, we would create a more formal document, complying
 with the norms of traditional scientific publication, and submit to a peer-reviewed journal (after depositing the preprint as well).
 
+Don't have an account on github ? please create one on [GitHub](https://github.com)
+You will need a **token** - please navigate to your account (top right) and then go to "developer settings" and "personal access token" create a token - click on "repo" and take the token to do things like `git push` (see below) 
+
 ## Pre-Registration
 In this case, we do have a specific set of hypotheses we are testing. In general, we *should* pre-register this plan (or consider a [registered report]()) 
 but those steps are considered to be outside the scope of what we can accomplish in our time together. We highly recommend you read more about this 
