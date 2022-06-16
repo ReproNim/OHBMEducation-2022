@@ -237,6 +237,28 @@ Extract specific fields, where fsl_000030 is the code for "Right-Thalamus-Proper
 ```
 pynidm query -nl rawdata/my_nidm.ttl --get_fields age,fsl_000030,sex
 ```
+Codes for various structural volumes:
+
+| Structure | Code |
+|:---------:|:----:|
+|Left-Accumbens-area (mm^3)|	fsl_000004|
+|Left-Amygdala (mm^3)	|fsl_000006|
+|Left-Caudate (mm^3)	|fsl_000008|
+|Left-Hippocampus (mm^3)	|fsl_000010|
+|Left-Pallidum (mm^3)	|fsl_000012|
+|Left-Putamen (mm^3)	|fsl_000014|
+|Left-Thalamus-Proper (mm^3)|	fsl_000016|
+|Right-Accumbens-area (mm^3)|	fsl_000018|
+|Right-Amygdala (mm^3)|	fsl_000020|
+|Right-Caudate (mm^3)	|fsl_000022|
+|Right-Hippocampus (mm^3)|	fsl_000024|
+|Right-Pallidum (mm^3)	|fsl_000026|
+|Right-Putamen (mm^3)	|fsl_000028|
+|Right-Thalamus-Proper (mm^3)|	fsl_000030|
+|csf (mm^3)	|fsl_000032|
+|gray (mm^3)	|fsl_000034|
+|white (mm^3)|	fsl_000036|
+
 
 ## Linear Regression
 Within the my_nidm.ttl we can also perform simple statistical analyses. Returning to our hypotheses, our nidm file knows about age, sex, diagnosis, and the regional brain volumes.
