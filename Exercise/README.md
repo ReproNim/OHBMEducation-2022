@@ -96,6 +96,7 @@ This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.
 
 You can "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
 ```
+cd my_ds001907-EDU
 git push
 Username for 'https://github.com': "Your_GitHub_username"
 Password for 'https://dnkennedy@github.com': "Your_GitHub_token"
