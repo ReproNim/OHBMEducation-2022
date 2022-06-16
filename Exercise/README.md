@@ -112,6 +112,7 @@ Now that we have our dataset, and have it 'published', we can prepare to use thi
 
 ## Setting the Analysis Environment Commands
 ```
+cd
 datalad create -c text2git my_analysis
 cd my_analysis
 
