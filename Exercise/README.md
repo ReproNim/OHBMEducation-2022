@@ -15,7 +15,7 @@ Amongst the first things we need to do on this platform is let *git* know about 
 
 Set your username: ```git config --global user.name "FirstName LastName"```
 
-Set your email address: ```git config --global user.email "MY_NAME@example.com"```
+Set your email address: ```git config --global user.email "YourUserName@example.com"```
 
 # The Steps
 We will do our re-executable publication in a sequence of steps that are designed to accomplish all the necessary tasks in the timeframe allocated by our
