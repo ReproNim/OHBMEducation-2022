@@ -65,6 +65,7 @@ Now we are going to 'fork' (make a copy) of our specially prepared reduced versi
 
 Now, on the JupyterHub in your my_data directory, let's clone your fork of this dataset, please replace "YOUR-GITHUB-LOGIN" with your GitHub username: 
 ```
+cd ~/my_data
 git clone https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git my_ds001907-EDU
 ```
 You now have the 'complete' dataset in the my_ds001907-EDU directory.
