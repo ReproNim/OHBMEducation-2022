@@ -102,7 +102,7 @@ This dataset will (hopefully) pass, and if it does, that outcome will be reporte
 
 Congratulations, you have a valid BIDS (and DataLad) dataset!
 
-You can now "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
+You can now "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others:
 ```
 cd my_ds001907-EDU
 git push
