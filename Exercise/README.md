@@ -123,6 +123,8 @@ cd my_analysis
 Install all desired "components"
 ```
 datalad install -d . -s https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git rawdata
+```
+```
 datalad install -d . -s https://github.com/ReproNim/containers containers
 mkdir code
 datalad install -d . -s https://github.com/proj-nuisance/simple_workflow code/simple_workflow
