@@ -211,13 +211,6 @@ do
 done
 ```
 
-***other shells***
-```
-foreach f (`cat cases.txt`)
-echo $f
-fslsegstats2nidm -f $PWD/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl
-end
-```
 This should generate the following output:
 ```
 sub-RC4101
