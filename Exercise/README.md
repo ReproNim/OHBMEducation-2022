@@ -1,5 +1,9 @@
 # The Publication Exercise for the course
 
+# Prerequsite
+Don't have an account on github ? please create one on [GitHub](https://github.com)
+You will need a **token** - please navigate to your account (top right) and then go to "developer settings" and "personal access token" create a token - click on "repo" and take the token to do things like `git push` (see below). 
+
 # JupyterHub
 JupyterHub provides the computational platform we will use. We can all use a common platform with all our needed software prerequisites 
 and environment pre-set. This eliminates the hassle of making all this work on everyone's local computers. However, the downside is that you 
@@ -26,9 +30,6 @@ In this case, our final publication will be in the form of a GitHub repository, 
 shared location. A GitHub repo is FAIR: Findable, Accessible, Interoperable and Reusable. Since this will be 'self published' and not peer-reviewed, 
 we really should think of this as a pre-print of our 'publication'. Were this an actual publication, we would create a more formal document, complying
 with the norms of traditional scientific publication, and submit to a peer-reviewed journal (after depositing the preprint as well).
-
-Don't have an account on github ? please create one on [GitHub](https://github.com)
-You will need a **token** - please navigate to your account (top right) and then go to "developer settings" and "personal access token" create a token - click on "repo" and take the token to do things like `git push` (see below) 
 
 ## Pre-Registration
 In this case, we do have a specific set of hypotheses we are testing. In general, we *should* pre-register this plan (or consider a [registered report]()) 
