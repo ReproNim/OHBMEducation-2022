@@ -100,14 +100,16 @@ singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.s
 This dataset will (hopefully) pass, and if it does, that outcome will be reported to you ("This dataset appears to be BIDS compatible.") by the validator. You can ignore the warnings about 
 "...Tabular file contains custom columns..." for now. 
 
-Congratulations, you have a valid BIDS (and DataLad) dataset!
+Great, you now have a valid BIDS (and DataLad) dataset.
 
-You can now "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others:
+Now you can now "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others:
 ```
 cd my_ds001907-EDU
 git push
 ```
 ***Note:*** Git may or may not ask you for your username and password, but by password, it rally means the ***token*** that you saved earlier, depending on how you have your git account setup. Make sure you have your token...
+
+Congratulations! You have now published your dataset by putting it in a github repo, where it is now both findable and citable.
 
 Now that we have our dataset, and have it 'published', we can prepare to use this dataset in our analysis. We will do this in two main steps: 1) setting up our analysis environment, and 2) running the analysis.
 
