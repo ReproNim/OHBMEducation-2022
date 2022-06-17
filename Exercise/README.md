@@ -119,13 +119,16 @@ Now that we have our dataset, and have it 'published', we can prepare to use thi
 cd
 datalad create -c text2git my_analysis
 cd my_analysis
-
-# Install all desired "components"
+```
+Install all desired "components"
+```
 datalad install -d . -s https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git rawdata
 datalad install -d . -s https://github.com/ReproNim/containers containers
 mkdir code
 datalad install -d . -s https://github.com/proj-nuisance/simple_workflow code/simple_workflow
-
+```
+Make some working space and tell git to ignore the working space
+```
 mkdir workdir
 echo workdir > .gitignore
 datalad save -m "ignore workdir" .gitignore
