@@ -50,9 +50,10 @@ For our purposes here, each student/team will get 5 randomly assigned typically 
 'your study' will be under-powered, but, frankly, it's still underpowered even if you have 100's of subjects, we'll talk about *that* separately.
 
 #### Let's Do It!
-On the JupyterHub in your home directory, let's make a directory for your data:
+On the JupyterHub in your home directory (i.e. the prompt in your terminal window will look something like ```jovyan@jupyter-YourGithubUsername:~$```, let's make a directory for your data:
 ```
-mkdir my_data
+cd
+cd mkdir my_data
 cd my_data
 ```
 
