@@ -76,7 +76,7 @@ cd my_ds001907-EDU
 git config credential.helper 'cache --timeout=3600'
 ```
 
-Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
+Let's create your own specific working subset from this master dataset. You will receive an assigned set of cases for your working at the class. For this example, I will just take 
 sub-RC4101 and sub-RC4227 as my assigned cases. Then 
 1. Remove the sub-* directories that are **not** in your dataset
 2. Remove the lines of the *participants.tsv* file that are not for your subjects
