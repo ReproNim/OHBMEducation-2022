@@ -484,6 +484,10 @@ In order to store annexed dataset contents on GitHub, we need first to create a 
 ```
 datalad create-sibling-github my_experiment
 ```
+Remind git to remember you for this repository, to save lots of authenticating later on: 
+```
+git config credential.helper 'cache --timeout=3600'
+```
 To avoid a possible shortcoming in DataLad GitHub interaction, we do the following first:
 ```
 datalad push --to=github
@@ -496,7 +500,7 @@ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub
 
 By running `datalad siblings` from the dataset directory, it will be evident that we now have two siblings of the original DataLad dataset, for example:
 ```
-$ datalad siblings
+datalad siblings
 .: here(+) [git]
 .: github(-) [https://github.com/$Your_GitHub_Username/my_experiment.git (git)]
 .: github-lfs(+) [git]
@@ -510,7 +514,7 @@ datalad siblings configure -s github --publish-depends github-lfs
 
 Finally, with this single step it becomes possible to transfer the entire dataset, including annexed file content, to the same GitHub repository:
 ```
-$ datalad push --to=github
+datalad push --to=github
 ```
 
 Others can now fork or clone this repository, see your complete process, and re-run the analysis to exactely replicate your results, 
