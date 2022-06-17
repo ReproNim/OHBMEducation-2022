@@ -13,7 +13,7 @@ Click that icon to get started.
 
 Amongst the first things we need to do on this platform is let *git* know about who you are. To do this:
 
-Set your username: ```git config --global user.name "FIRST_NAME LAST_NAME"```
+Set your username: ```git config --global user.name "FirstName LastName"```
 
 Set your email address: ```git config --global user.email "MY_NAME@example.com"```
 
