@@ -70,7 +70,11 @@ git clone https://github.com/<YOUR-GITHUB-LOGIN>/ds001907-EDU.git my_ds001907-ED
 ```
 You now have the 'complete' dataset in the my_ds001907-EDU directory.
 
-Now, you can teach git to remember you, to save typing later on: ```git config credential.helper 'cache --timeout=3600' ```
+Now, you can teach git to remember you, to save typing later on: 
+```
+cd my_ds001907-EDU
+git config credential.helper 'cache --timeout=3600'
+```
 
 Let's create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take 
 sub-RC4101 and sub-RC4227 as my assigned cases. Then 
