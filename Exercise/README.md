@@ -469,7 +469,7 @@ We have a StarDog graph database. You can 'publish' your results to this accessi
 
 This will be something like the following (but is still under TODO debugging and planning):
 ```
-curl --location --request POST "https://stardog.scicrunch.io:5821/Repronim_OHBM_2022graph=urn:http://repronim.org/OHBM2022/<YourInitials>" --header "Content-Type: text/turtle" --user repro-student:XXXX --data-binary @/home/jovyan/my_analysis/rawdata/my_nidm.ttl
+curl --location --request POST 'https://stardog.scicrunch.io:5821/Repronim_OHBM_2022?graph=urn:http://repronim.org/<YourInitials>' --header 'Content-Type: text/turtle' --user repro-student:XXXX --data-binary '@/home/jovyan/my_analysis/rawdata/my_nidm.ttl'
 ```
 where the XXXX password will be provided in class.
 
