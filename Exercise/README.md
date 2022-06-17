@@ -86,7 +86,7 @@ The dataset you cloned had some other files that are not necessary, or that we'l
 rm nidm.ttl demographics.csv
 ```
 Next, Let's confirm that your working subset is still have a happy BIDS dataset. The dataset you cloned (which is actually a DataLad dataset, which we will discuss later) so let's clean up the DataLad aspect 
-of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):
+of this new data subset and run the BIDS validator (locally as a Singularity container application, in a way that deals with a DataLad dataset):
 ```
 datalad save -m "My new dataset" .
 ```
@@ -96,7 +96,7 @@ And then actually run the validator (using singularity):
 cd ..
 singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
-IF Docker were available to us, this would have been the syntax of the validation command:
+IF Docker (rather than Singularity) were available to us, then we could have done this task using Docker with the following syntax of the validation command:
 ```
 docker run -ti --rm -v $PWD:/data:ro bids/validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
