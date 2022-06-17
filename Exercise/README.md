@@ -59,7 +59,7 @@ cd my_data
 
 Now we are going to 'fork' (make a copy) of our specially prepared reduced version of the ds001907 dataset. To do this, we will
 1. In your browser open up a new tab to the dataset's repo: https://github.com/ReproNim/ds001907-EDU
-2. 'Fork' this dataset to your own account.
+2. 'Fork' this dataset to your own GitHub account.
 
 ![picture](../pics/GitHub_fork.png)
 
