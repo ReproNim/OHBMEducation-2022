@@ -180,9 +180,9 @@ this file. [NIDM](http://nidm.nidash.org/) was developed to provide a standardis
 example, I could associate that field with a reference to a definition of what we mean for this field, like this [link](TODO). So, our next step is 
 to represent our imaging data in the NIDM representation.
 
+ In the my_analysis directory...
 ```
-# In the my_analysis directory...
-$ bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
+bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
 ```
 
 You will need to answer a number of questions about your data. Details of an example session are shown [here](bidsmri2nidm.txt). 
