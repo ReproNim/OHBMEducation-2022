@@ -96,10 +96,7 @@ And then actually run the validator (using singularity):
 cd ..
 singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
-IF Docker (rather than Singularity) were available to us, then we could have done this task using Docker with the following syntax of the validation command:
-```
-docker run -ti --rm -v $PWD:/data:ro bids/validator /data --ignoreSymlinks --ignoreNiftiHeaders
-```
+
 This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. You can ignore the warnings about 
 "...Tabular file contains custom columns..." for now. Congratulations, you have a valid BIDS (and DataLad) dataset.
 
