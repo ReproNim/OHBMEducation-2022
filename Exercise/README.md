@@ -97,7 +97,7 @@ cd ..
 singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
 
-This dataset will (hopefully) pass ("This dataset appears to be BIDS compatible.") the validator. You can ignore the warnings about 
+This dataset will (hopefully) pass, and if it does, that outcome will be reported to you ("This dataset appears to be BIDS compatible.") by the validator. You can ignore the warnings about 
 "...Tabular file contains custom columns..." for now. Congratulations, you have a valid BIDS (and DataLad) dataset.
 
 You can "publish" this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.
