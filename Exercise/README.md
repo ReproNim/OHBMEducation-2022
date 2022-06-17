@@ -471,7 +471,7 @@ This will be something like the following (but is still under TODO debugging and
 ```
 curl --location --request POST 'https://stardog.scicrunch.io:5821/Repronim_OHBM_2022?graph=urn:http://repronim.org/<YourInitials>' --header 'Content-Type: text/turtle' --user repro-student:XXXX --data-binary '@/home/jovyan/my_analysis/rawdata/my_nidm.ttl'
 ```
-where the XXXX password will be provided in class.
+where the XXXX password will be provided in class, and your own initials should be inserted where specified (this provides a unique identifier).
 
 # Publish the Complete Package
 There are numerous places you can now share this complete dataset. GitHub does not 'like' large binary datasets, all the imaging data we have
