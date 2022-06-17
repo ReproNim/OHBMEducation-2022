@@ -53,7 +53,7 @@ For our purposes here, each student/team will get 5 randomly assigned typically 
 On the JupyterHub in your home directory (i.e. the prompt in your terminal window will look something like ```jovyan@jupyter-YourGithubUsername:~$```, let's make a directory for your data:
 ```
 cd
-cd mkdir my_data
+mkdir my_data
 cd my_data
 ```
 
