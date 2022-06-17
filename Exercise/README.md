@@ -1,6 +1,6 @@
 # The Publication Exercise for the course
 
-# JuputerHub
+# JupyterHub
 JupyterHub provides the computational platform we will use. We can all use a common platform with all our needed software prerequisites 
 and environment pre-set. This eliminates the hassle of making all this work on everyone's local computers. However, the downside is that you 
 may not be able to replicate this example 'at home' unless/until you solve the software prerequisites on your own computational platform.
