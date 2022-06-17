@@ -106,11 +106,8 @@ You can now "publish" this dataset by pushing it back to your GitHub repo, where
 ```
 cd my_ds001907-EDU
 git push
-Username for 'https://github.com': "Your_GitHub_username"
-Password for 'https://dnkennedy@github.com': "Your_GitHub_token"
 ```
-
-***Note:*** Git may or may not ask you for your username and token, depending on how you have your git account setup. Make sure you have your token...
+***Note:*** Git may or may not ask you for your username and password, but by password, it rally means the ***token*** that you saved earlier, depending on how you have your git account setup. Make sure you have your token...
 
 Now that we have our dataset, and have it 'published', we can prepare to use this dataset in our analysis. We will do this in two main steps: 1) setting up our analysis environment, and 2) running the analysis.
 
