@@ -222,6 +222,11 @@ Writing Augmented NIDM file...
 ```
 and your volumes should now be included in you my_nidm.ttl file!
 
+Let's make DataLad happy with the results we have just updated...
+```
+datalad save -m "added imaging and volume metadata" -r
+```
+
 # Querying the results
 Now, what can we do with our results? We can interogate the my_nidm.ttl file for the contents that is has. For example, what subjects are in this data file?
 ```
