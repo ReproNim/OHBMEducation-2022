@@ -1,0 +1,381 @@
+@prefix bids: <http://bids.neuroimaging.io/> .
+@prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix edam: <https://bioportal.bioontology.org/ontologies/EDAM> .
+@prefix fsl: <http://purl.org/nidash/fsl#> .
+@prefix ilx: <http://uri.interlex.org/> .
+@prefix ndar: <https://ndar.nih.gov/api/datadictionary/v2/dataelement/> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix niiri: <http://iri.nidash.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix onli: <http://neurolog.unice.fr/ontoneurolog/v3.0/instrument.owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/ontology/sio.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+niiri:a868fd38-eef4-11ec-9fc6-8669870c5b06 a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    niiri:age_27ip9oi "66.28288"^^xsd:string ;
+    niiri:diagnosis_2d2d6dr "PD"^^xsd:string ;
+    niiri:sex_1aspfo2 "Male"^^xsd:string ;
+    nfo:filename "participants.tsv"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/participants.tsv"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a868f928-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:wasInfluencedBy niiri:a8e23388-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a92f3002-eef4-11ec-9fc6-8669870c5b06 a onli:assessment-instrument,
+        nidm:AcquisitionObject,
+        prov:Entity ;
+    niiri:age_27ip9oi "69.04774"^^xsd:string ;
+    niiri:diagnosis_2d2d6dr "TD"^^xsd:string ;
+    niiri:sex_1aspfo2 "Male"^^xsd:string ;
+    nfo:filename "participants.tsv"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/participants.tsv"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a92f2972-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:wasInfluencedBy niiri:a9991cec-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a9ef77e0-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "21a13d0f0c968b407db42fa73ace628a2d8cd71fb3d189ba44f016877485c0a11821dd2f13f00412dc9976704e4a342985310433bcd88f5e943dd05ec53ec2c3"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4103/ses-1/anat/sub-RC4103_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4103/ses-1/anat/sub-RC4103_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a9ef33fc-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:aa5cac0c-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4103/ses-2/anat/sub-RC4103_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4103/ses-2/anat/sub-RC4103_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aa5c7124-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:aab57800-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:aaba410a-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "887d64240d2b13efb274a5b55ba8371595c8b70b1b6d64dc00dd6019bc3f55dd0e33679d775a481c4ca312d5d89b25b9c45ffbc0a9d8c2df182fc288f9dfd54d"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4227/ses-1/anat/sub-RC4227_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4227/ses-1/anat/sub-RC4227_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:aaba0848-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ab24fb12-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4227/ses-2/anat/sub-RC4227_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4227/ses-2/anat/sub-RC4227_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ab24baee-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ab80366c-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ab84eb58-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    crypto:sha512 "df74a82dceac0b48376450fc8841a257f45b390297de3fd1fd98f73b023871ab245269fdd0662a0d94335aac6019c6a5f8491e1e743f670b6aaaa2e2c969b6e8"^^xsd:string ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4101/ses-1/anat/sub-RC4101_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4101/ses-1/anat/sub-RC4101_ses-1_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:ab84b372-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:abeea3a4-eef4-11ec-9fc6-8669870c5b06 a nidm:AcquisitionObject,
+        prov:Entity ;
+    nidm:hadAcquisitionModality nidm:MagneticResonanceImaging ;
+    nidm:hadImageContrastType nidm:T1Weighted ;
+    nidm:hadImageUsageType nidm:Anatomical ;
+    nfo:filename "/sub-RC4101/ses-2/anat/sub-RC4101_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/sub-RC4101/ses-2/anat/sub-RC4101_ses-2_T1w.nii.gz"^^xsd:string ;
+    prov:wasGeneratedBy niiri:abee6fa6-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ac46a4fa-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:age_27ip9oi a nidm:PersonalDataElement,
+        prov:Entity ;
+    rdfs:label "age" ;
+    dct:description "years" ;
+    nidm:isAbout ilx:ilx_0383109 ;
+    nidm:sourceVariable "age" ;
+    ilx:ilx_0739289 "NIDM" .
+
+niiri:ba7dd9c6-eef4-11ec-b670-8669870c5b06 a nidm:FSLStatsCollection,
+        prov:Entity ;
+    fsl:fsl_000001 11481920 ;
+    fsl:fsl_000002 "11481920.0"^^xsd:float ;
+    fsl:fsl_000003 537 ;
+    fsl:fsl_000004 "537.0"^^xsd:float ;
+    fsl:fsl_000005 1593 ;
+    fsl:fsl_000006 "1593.0"^^xsd:float ;
+    fsl:fsl_000007 3977 ;
+    fsl:fsl_000008 "3977.0"^^xsd:float ;
+    fsl:fsl_000009 3547 ;
+    fsl:fsl_000010 "3547.0"^^xsd:float ;
+    fsl:fsl_000011 1999 ;
+    fsl:fsl_000012 "1999.0"^^xsd:float ;
+    fsl:fsl_000013 5262 ;
+    fsl:fsl_000014 "5262.0"^^xsd:float ;
+    fsl:fsl_000015 9252 ;
+    fsl:fsl_000016 "9252.0"^^xsd:float ;
+    fsl:fsl_000017 331 ;
+    fsl:fsl_000018 "331.0"^^xsd:float ;
+    fsl:fsl_000019 1616 ;
+    fsl:fsl_000020 "1616.0"^^xsd:float ;
+    fsl:fsl_000021 4063 ;
+    fsl:fsl_000022 "4063.0"^^xsd:float ;
+    fsl:fsl_000023 3896 ;
+    fsl:fsl_000024 "3896.0"^^xsd:float ;
+    fsl:fsl_000025 1962 ;
+    fsl:fsl_000026 "1962.0"^^xsd:float ;
+    fsl:fsl_000027 5312 ;
+    fsl:fsl_000028 "5312.0"^^xsd:float ;
+    fsl:fsl_000029 9069 ;
+    fsl:fsl_000030 "9069.0"^^xsd:float ;
+    fsl:fsl_000031 330623 ;
+    fsl:fsl_000032 "330623.0"^^xsd:float ;
+    fsl:fsl_000033 593671 ;
+    fsl:fsl_000034 "593671.0"^^xsd:float ;
+    fsl:fsl_000035 647740 ;
+    fsl:fsl_000036 "647740.0"^^xsd:float ;
+    prov:wasGeneratedBy niiri:ba8705f0-eef4-11ec-b670-8669870c5b06 .
+
+niiri:bc427118-eef4-11ec-b866-8669870c5b06 a nidm:FSLStatsCollection,
+        prov:Entity ;
+    fsl:fsl_000001 11485664 ;
+    fsl:fsl_000002 "11485664.0"^^xsd:float ;
+    fsl:fsl_000003 636 ;
+    fsl:fsl_000004 "636.0"^^xsd:float ;
+    fsl:fsl_000005 1393 ;
+    fsl:fsl_000006 "1393.0"^^xsd:float ;
+    fsl:fsl_000007 3472 ;
+    fsl:fsl_000008 "3472.0"^^xsd:float ;
+    fsl:fsl_000009 3691 ;
+    fsl:fsl_000010 "3691.0"^^xsd:float ;
+    fsl:fsl_000011 1914 ;
+    fsl:fsl_000012 "1914.0"^^xsd:float ;
+    fsl:fsl_000013 5389 ;
+    fsl:fsl_000014 "5389.0"^^xsd:float ;
+    fsl:fsl_000015 8840 ;
+    fsl:fsl_000016 "8840.0"^^xsd:float ;
+    fsl:fsl_000017 345 ;
+    fsl:fsl_000018 "345.0"^^xsd:float ;
+    fsl:fsl_000019 873 ;
+    fsl:fsl_000020 "873.0"^^xsd:float ;
+    fsl:fsl_000021 3613 ;
+    fsl:fsl_000022 "3613.0"^^xsd:float ;
+    fsl:fsl_000023 3515 ;
+    fsl:fsl_000024 "3515.0"^^xsd:float ;
+    fsl:fsl_000025 1798 ;
+    fsl:fsl_000026 "1798.0"^^xsd:float ;
+    fsl:fsl_000027 5051 ;
+    fsl:fsl_000028 "5051.0"^^xsd:float ;
+    fsl:fsl_000029 8142 ;
+    fsl:fsl_000030 "8142.0"^^xsd:float ;
+    fsl:fsl_000031 359828 ;
+    fsl:fsl_000032 "359828.0"^^xsd:float ;
+    fsl:fsl_000033 562204 ;
+    fsl:fsl_000034 "562204.0"^^xsd:float ;
+    fsl:fsl_000035 710459 ;
+    fsl:fsl_000036 "710459.0"^^xsd:float ;
+    prov:wasGeneratedBy niiri:bc4d57ae-eef4-11ec-b866-8669870c5b06 .
+
+niiri:diagnosis_2d2d6dr a nidm:PersonalDataElement,
+        prov:Entity ;
+    rdfs:label "diagnosis" ;
+    dct:description "diagnosis" ;
+    nidm:isAbout ilx:ilx_0497879 ;
+    nidm:sourceVariable "diagnosis" ;
+    ilx:ilx_0739289 "NIDM" .
+
+niiri:sex_1aspfo2 a nidm:PersonalDataElement,
+        prov:Entity ;
+    rdfs:label "sex" ;
+    dct:description "sex" ;
+    nidm:isAbout ilx:ilx_0738439 ;
+    nidm:sourceVariable "sex" ;
+    ilx:ilx_0739289 "NIDM" .
+
+niiri:a868f428-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a8e23388-eef4-11ec-9fc6-8669870c5b06 a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a868f928-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a92f1ebe-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a9991cec-eef4-11ec-9fc6-8669870c5b06 a bids:sidecar_file,
+        prov:Entity ;
+    nfo:filename "participants.json"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata/participants.json"^^xsd:string ;
+    prov:wasGeneratedBy niiri:a92f2972-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a9edfd48-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "1"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:a9ef33fc-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a9edfd48-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a9ef3956-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:aa5b13f6-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "2"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:aa5c7124-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aa5b13f6-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a9ef3956-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:aab8a818-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "1"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:aaba0848-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:aab8a818-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a92f3462-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ab2364c8-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "2"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ab24baee-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ab2364c8-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a92f3462-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ab83825e-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "1"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:ab84b372-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:ab83825e-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a8690170-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:abecf5c2-eef4-11ec-9fc6-8669870c5b06 a nidm:Session,
+        prov:Activity ;
+    bids:session_number "2"^^xsd:string ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 .
+
+niiri:abee6fa6-eef4-11ec-9fc6-8669870c5b06 a nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:abecf5c2-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a8690170-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:ba8705f0-eef4-11ec-b670-8669870c5b06 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a8690170-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ba870ab4-eef4-11ec-b670-8669870c5b06 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
+niiri:bc4d57ae-eef4-11ec-b866-8669870c5b06 a prov:Activity ;
+    dct:description "FSL FAST/FIRST segmentation statistics" ;
+    dct:isPartOf niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a92f3462-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ],
+        [ a prov:Association ;
+            prov:agent niiri:ba870ab4-eef4-11ec-b670-8669870c5b06 ;
+            prov:hadRole nidm:NIDM_0000164 ] .
+
+ilx:ilx_0383109 a prov:Entity ;
+    rdfs:label "Date" .
+
+ilx:ilx_0497879 a prov:Entity ;
+    rdfs:label "Diagnosis, Psychiatric" .
+
+ilx:ilx_0738439 a prov:Entity ;
+    rdfs:label "SEX" .
+
+niiri:a868f928-eef4-11ec-9fc6-8669870c5b06 a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a868f428-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a8690170-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a92f2972-eef4-11ec-9fc6-8669870c5b06 a onli:instrument-based-assessment,
+        nidm:Acquisition,
+        prov:Activity ;
+    dct:isPartOf niiri:a92f1ebe-eef4-11ec-9fc6-8669870c5b06 ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:agent niiri:a92f3462-eef4-11ec-9fc6-8669870c5b06 ;
+            prov:hadRole sio:Subject ] .
+
+niiri:a9ef3956-eef4-11ec-9fc6-8669870c5b06 a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "RC4103"^^xsd:string .
+
+niiri:ba870ab4-eef4-11ec-b670-8669870c5b06 a prov:Agent,
+        prov:SoftwareAgent ;
+    nidm:NIDM_0000164 fsl: .
+
+nidm:PersonalDataElement rdfs:subClassOf nidm:DataElement .
+
+niiri:a8690170-eef4-11ec-9fc6-8669870c5b06 a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "sub-RC4101"^^xsd:string .
+
+niiri:a92f3462-eef4-11ec-9fc6-8669870c5b06 a prov:Agent,
+        prov:Person ;
+    ndar:src_subject_id "sub-RC4227"^^xsd:string .
+
+niiri:eabe724c-eef4-11ec-9fc6-8669870c5b06 a nidm:Project,
+        prov:Activity ;
+    obo:IAO_0000324 "Please cite the data paper: ---"^^xsd:string ;
+    obo:IAO_0000623 "NIH RC4 NS073008NIH P50 NS062684Ruth L. Kirschstein National Research Service Award T32AG0000258"^^xsd:string ;
+    dctypes:title "ANT: Healthy aging and Parkinson's disease"^^xsd:string ;
+    dct:license "CC0"^^xsd:string ;
+    sio:Identifier "1.0.1"^^xsd:string ;
+    dcat:author "Trevor K. M. DayTara M. MadyasthaPeter BoordMary K. AskrenThomas J. MontineThomas J. Grabowski"^^xsd:string ;
+    dcat:creator "doi.org/10.1016/j.nicl.2016.11.004doi.org/10.1089/brain.2014.0248"^^xsd:string ;
+    prov:Location "file://home/jovyan/my_analysis3/rawdata"^^xsd:string ;
+    edam:data_1188 ""^^xsd:string .
+
