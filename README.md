@@ -61,8 +61,8 @@ The goal of this 1/2 day (4 hour) course is to have the students **DO** a re-exe
 
 # Approach Overview
 What do we mean by 'do a re-executable' publication?
-* [DataLad](https://www.datalad.org/) install a particular dataset
+* [DataLad](https://www.datalad.org/) install a particular dataset - [DataLad@NITRC](https://www.nitrc.org/projects/datalad)
 * [DataLad containers-run](http://handbook.datalad.org/en/latest/basics/101-133-containersrun.html) a particular container (that generates some derived images and results in NIDM)
 * [DataLad "Publish"](http://docs.datalad.org/projects/deprecated/en/latest/generated/man/datalad-publish.html) the resulting dataset
-* [pynidm](https://github.com/incf-nidash/PyNIDM) query the results, and run a specific statistical test
+* [pynidm](https://github.com/incf-nidash/PyNIDM) query the results, and run a specific statistical test - [PyNIDM@NITRC](https://www.nitrc.org/projects/pynidm)
 * "Publish" the NIDM results to the [ReproLake](https://www.youtube.com/watch?v=VQ5t24mrvJI)
