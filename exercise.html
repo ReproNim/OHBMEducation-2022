@@ -228,9 +228,21 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequsites">
+   Prerequsites
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupyterhub">
    JupyterHub
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meet-your-reprohub">
+     Meet your ReproHub
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-steps">
@@ -360,9 +372,21 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequsites">
+   Prerequsites
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupyterhub">
    JupyterHub
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meet-your-reprohub">
+     Meet your ReproHub
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-steps">
@@ -478,12 +502,33 @@
   <div class="section" id="the-publication-exercise-for-the-course">
 <h1>The Publication Exercise for the course<a class="headerlink" href="#the-publication-exercise-for-the-course" title="Permalink to this headline">¶</a></h1>
 </div>
+<div class="section" id="prerequsites">
+<h1>Prerequsites<a class="headerlink" href="#prerequsites" title="Permalink to this headline">¶</a></h1>
+<p>Don’t have an account on github ? please create one on <a class="reference external" href="https://github.com">GitHub</a>
+You will need a <strong>token</strong> - please navigate to your account (top right) and then go to “developer settings” and “personal access token” create a token - click on “repo” and take the token to do things like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> (see below).</p>
+<p>For the exercises below it will also be important to have a ‘fork’ of the “ReproNim/OHBMEducation-2022” GitHub repository. to do this:</p>
+<ol class="simple">
+<li><p>Navigate your browser to <a class="reference external" href="https://github.com/ReproNim/OHBMEducation-2022">https://github.com/ReproNim/OHBMEducation-2022</a></p></li>
+<li><p>Select ‘fork’ in the row of operations at the top of the window</p></li>
+<li><p>Select ‘Create Fork’</p></li>
+</ol>
+<p>You now have you own copy of the couse materials to use in the future.</p>
+</div>
 <div class="section" id="jupyterhub">
 <h1>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this headline">¶</a></h1>
 <p>JupyterHub provides the computational platform we will use. We can all use a common platform with all our needed software prerequisites
 and environment pre-set. This eliminates the hassle of making all this work on everyone’s local computers. However, the downside is that you
 may not be able to replicate this example ‘at home’ unless/until you solve the software prerequisites on your own computational platform.
 That’s OK, <em><strong>ReproNim</strong></em> is here to help after the course with your own ‘home’ computational platform.</p>
+<div class="section" id="meet-your-reprohub">
+<h2>Meet your ReproHub<a class="headerlink" href="#meet-your-reprohub" title="Permalink to this headline">¶</a></h2>
+<p>The ReproHub is hosted at a URL that we will give you in class. Point your browser to this url. You will use your GitHub authorization in order to log in.
+Once you are in the site, you will see the ‘Launcher’ from where you can ‘launch’ many ships. For now, we’ll want a command line “terminal”.
+Click that icon to get started.</p>
+<p>Amongst the first things we need to do on this platform is let <em>git</em> know about who you are. To do this:</p>
+<p>Set your username: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;FirstName</span> <span class="pre">LastName&quot;</span></code></p>
+<p>Set your email address: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;YourUserName&#64;example.com&quot;</span></code></p>
+</div>
 </div>
 <div class="section" id="the-steps">
 <h1>The Steps<a class="headerlink" href="#the-steps" title="Permalink to this headline">¶</a></h1>
@@ -491,7 +536,8 @@ That’s OK, <em><strong>ReproNim</strong></em> is here to help after the course
 course.</p>
 <div class="section" id="create-a-github-repo-for-your-publication">
 <h2>Create a GitHub Repo for your Publication<a class="headerlink" href="#create-a-github-repo-for-your-publication" title="Permalink to this headline">¶</a></h2>
-<p>In this case, our final publication will be in the form of a GitHub repository, where we can connect all the parts of our publication in a central,
+<p><em><strong>Note</strong></em> We’re not going to do this today, but in the event of a ‘real’ paper we would do the following.</p>
+<p>Our final publication should include a GitHub repository, where we can connect all the parts of our publication in a central,
 shared location. A GitHub repo is FAIR: Findable, Accessible, Interoperable and Reusable. Since this will be ‘self published’ and not peer-reviewed,
 we really should think of this as a pre-print of our ‘publication’. Were this an actual publication, we would create a more formal document, complying
 with the norms of traditional scientific publication, and submit to a peer-reviewed journal (after depositing the preprint as well).</p>
@@ -500,14 +546,14 @@ with the norms of traditional scientific publication, and submit to a peer-revie
 <h2>Pre-Registration<a class="headerlink" href="#pre-registration" title="Permalink to this headline">¶</a></h2>
 <p>In this case, we do have a specific set of hypotheses we are testing. In general, we <em>should</em> pre-register this plan (or consider a <span class="xref myst">registered report</span>)
 but those steps are considered to be outside the scope of what we can accomplish in our time together. We highly recommend you read more about this
-topic <span class="xref myst">here</span></p>
+topic <a class="reference external" href="https://help.osf.io/article/158-create-a-preregistration">here</a>.</p>
 </div>
 <div class="section" id="collect-data">
 <h2>Collect Data<a class="headerlink" href="#collect-data" title="Permalink to this headline">¶</a></h2>
 <p>In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the
 <a class="reference external" href="https://openneuro.org/datasets/ds001907/versions/3.0.2">OpenNeuro ds001907</a> collection. The description of this study can be found at the
 OpenNeuro website, and this data was published in the following <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7217223/">data paper</a>. There are
-46 subjects in this overall dataset (25 healthy aging, 21 Parkinson’s Disease).</p>
+46 subjects in this overall dataset (25 healthy aging, 21 Parkinson’s Disease).  There are many other potential sources of Parkinson’s disease data: <a class="reference external" href="https://www.nitrc.org/xnat/index.php">NITRC-IR</a>, <a class="reference external" href="https://www.nitrc.org/projects/ppmi">Parkinson’s Progression Markers Initiative</a>, <a class="reference external" href="https://www.nitrc.org/projects/openneuro">OpenNeuro</a>, etc.</p>
 <div class="section" id="data-subset">
 <h3>Data Subset<a class="headerlink" href="#data-subset" title="Permalink to this headline">¶</a></h3>
 <p>Each student (or student group) will be assigned a subset of the above dataset for their analysis. This is both for practical purposes, as there is
@@ -517,63 +563,98 @@ For our purposes here, each student/team will get 5 randomly assigned typically 
 ‘your study’ will be under-powered, but, frankly, it’s still underpowered even if you have 100’s of subjects, we’ll talk about <em>that</em> separately.</p>
 <div class="section" id="let-s-do-it">
 <h4>Let’s Do It!<a class="headerlink" href="#let-s-do-it" title="Permalink to this headline">¶</a></h4>
-<p>On the JupyterHub in your home directory, let’s make a directory for your data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my_data</span>
+<p>On the JupyterHub in your home directory (i.e. the prompt in your terminal window will look something like <code class="docutils literal notranslate"><span class="pre">jovyan&#64;jupyter-YourGithubUsername:~$</span></code>, let’s make a directory for your data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+<span class="n">mkdir</span> <span class="n">my_data</span>
 <span class="n">cd</span> <span class="n">my_data</span>
 </pre></div>
 </div>
 <p>Now we are going to ‘fork’ (make a copy) of our specially prepared reduced version of the ds001907 dataset. To do this, we will</p>
 <ol class="simple">
-<li><p>Open a browser</p></li>
-<li><p>Navigate to the dataset’s repo: <a class="reference external" href="https://github.com/ReproNim/ds001907-EDU">https://github.com/ReproNim/ds001907-EDU</a></p></li>
-<li><p>‘Fork’ this dataset to your own account.</p></li>
+<li><p>In your browser open up a new tab to the dataset’s repo: <a class="reference external" href="https://github.com/ReproNim/ds001907-EDU">https://github.com/ReproNim/ds001907-EDU</a></p></li>
+<li><p>‘Fork’ this dataset to your own GitHub account.</p></li>
 </ol>
 <p><img alt="picture" src="_images/GitHub_fork.png" /></p>
 <p>Now, on the JupyterHub in your my_data directory, let’s clone your fork of this dataset, please replace “YOUR-GITHUB-LOGIN” with your GitHub username:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GITHUB</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">&gt;/</span><span class="n">ds001907</span><span class="o">-</span><span class="n">EDU</span><span class="o">.</span><span class="n">git</span> <span class="n">my_ds001907</span><span class="o">-</span><span class="n">EDU</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">my_data</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GITHUB</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">&gt;/</span><span class="n">ds001907</span><span class="o">-</span><span class="n">EDU</span><span class="o">.</span><span class="n">git</span> <span class="n">my_ds001907</span><span class="o">-</span><span class="n">EDU</span>
 </pre></div>
 </div>
 <p>You now have the ‘complete’ dataset in the my_ds001907-EDU directory.</p>
-<p>Let’s create your own specific subset of this dataset. You will receive an assigned set of cases at the class. For this example, I will just take
-sub-RC4101 and sub-RC4227 as my assigned cases. Then</p>
+<p>Now, you can teach git to remember you, to save typing later on:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my_ds001907</span><span class="o">-</span><span class="n">EDU</span>
+<span class="n">git</span> <span class="n">config</span> <span class="n">credential</span><span class="o">.</span><span class="n">helper</span> <span class="s1">&#39;cache --timeout=3600&#39;</span>
+</pre></div>
+</div>
+<p>Let’s create your own specific working subset from this master dataset. You (or your working group) will receive a “Group_Number” (i.e. Group_10) which assigns you a set of 10 cases for your working at the class. We then need to:</p>
 <ol class="simple">
-<li><p>Remove the sub-* directories that are <strong>not</strong> in your dataset</p></li>
-<li><p>Remove the lines of the <em>participants.tsv</em> file that are not for your subjects</p></li>
+<li><p>Remove the sub-* directories from the master data set (that you forked and cloned to your home directory) that are <strong>not</strong> in your assinged dataset</p></li>
+<li><p>Remove the lines of the <em>participants.tsv</em> file that are not for your subjects (your assigned 10 cases)</p></li>
 </ol>
-<p>The dataset you cloned had some other files that are not necessary, or that we’ll regenerate as part of your processing, so let’s remove them:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">participants</span><span class="o">.</span><span class="n">json</span> <span class="n">nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="n">demographics</span><span class="o">.</span><span class="n">csv</span>
+<p>You can see the cases that are in your group with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">more</span> <span class="o">~/</span><span class="n">Exercise</span><span class="o">-</span><span class="n">OHBM2022</span><span class="o">/</span><span class="n">Exercise</span><span class="o">/</span><span class="n">Groups</span><span class="o">/</span><span class="n">Group_10</span>
 </pre></div>
 </div>
-<p>Let’s confirm that we still have a happy BIDS dataset. The dataset you cloned is actually a DataLad dataset, so let’s clean up the DataLad aspect
-of this new data subset and run the BIDS validator (locally as a Docker application, in a way that deals with a DataLad dataset):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>datalad save -m &quot;My new dataset&quot; .
-docker run -ti --rm -v $PWD:/data:ro bids/validator /data --ignoreSymlinks --ignoreNiftiHeaders
+<p>which should generate output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Group</span> <span class="mi">10</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4101</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4128</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4129</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4130</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4131</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4206</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4207</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4208</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4210</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">RC4211</span>
 </pre></div>
 </div>
-<p>This dataset will (hopefully) pass (“This dataset appears to be BIDS compatible.”) the validator. Congratulations, you have a valid BIDS (and DataLad) dataset.</p>
-<p>You can “publish” this dataset by pushing it back to your GitHub repo, where it can be citable, and accessible by others.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
-<span class="n">Username</span> <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span><span class="p">:</span> <span class="s2">&quot;Your_GitHub_username&quot;</span>
-<span class="n">Password</span> <span class="k">for</span> <span class="s1">&#39;https://dnkennedy@github.com&#39;</span><span class="p">:</span> <span class="s2">&quot;Your_GitHub_token&quot;</span>
+<p>We have a simple ‘helper script’ that will create this subset of directories for you.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">~/</span><span class="n">Exercise</span><span class="o">-</span><span class="n">OHBM2022</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">data_subset</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">g</span> <span class="o">&lt;</span><span class="n">YourGroupNumber</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p><em><strong>Note:</strong></em> Git may or may not ask you for your username and token, depending on how you have your git account setup.</p>
+<p>Next, Let’s confirm that your working subset is still have a happy BIDS dataset. The dataset you cloned (which is actually a DataLad dataset, which we will discuss later) so let’s clean up the DataLad aspect
+of this new data subset and run the BIDS validator (locally as a Singularity container application, in a way that deals with a DataLad dataset):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">save</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;My new dataset&quot;</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>And then actually run the validator (using singularity):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ~/my_data
+singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
+</pre></div>
+</div>
+<p>This dataset will (hopefully) pass, and if it does, that outcome will be reported to you (“This dataset appears to be BIDS compatible.”) by the validator. You can ignore the warnings about
+“…Tabular file contains custom columns…” for now.</p>
+<p>Great, you now have a valid BIDS (and DataLad) dataset.</p>
+<p>Now you can now “publish” this dataset by pushing it back to your GitHub repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">my_data</span><span class="o">/</span><span class="n">my_ds001907</span><span class="o">-</span><span class="n">EDU</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p><em><strong>Note:</strong></em> Git may or may not ask you for your username and password, but by password, it rally means the <em><strong>token</strong></em> that you saved earlier, depending on how you have your git account setup. Make sure you have your token…</p>
+<p>Congratulations! You have now published your dataset by putting it in a github repo, where it is now both findable and citable.</p>
 <p>Now that we have our dataset, and have it ‘published’, we can prepare to use this dataset in our analysis. We will do this in two main steps: 1) setting up our analysis environment, and 2) running the analysis.</p>
 </div>
 </div>
 </div>
 <div class="section" id="setting-the-analysis-environment-commands">
 <h2>Setting the Analysis Environment Commands<a class="headerlink" href="#setting-the-analysis-environment-commands" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">create</span> <span class="o">-</span><span class="n">c</span> <span class="n">text2git</span> <span class="n">my_analysis</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+<span class="n">datalad</span> <span class="n">create</span> <span class="o">-</span><span class="n">c</span> <span class="n">text2git</span> <span class="n">my_analysis</span>
 <span class="n">cd</span> <span class="n">my_analysis</span>
-
-<span class="c1"># Install all desired &quot;components&quot;</span>
-<span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">.</span> <span class="o">-</span><span class="n">s</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GITHUB</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">&gt;/</span><span class="n">ds001907</span><span class="o">-</span><span class="n">EDU</span><span class="o">.</span><span class="n">git</span> <span class="n">rawdata</span>
-<span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">.</span> <span class="o">-</span><span class="n">s</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ReproNim</span><span class="o">/</span><span class="n">containers</span> <span class="n">containers</span>
+</pre></div>
+</div>
+<p>Install all desired “components”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">.</span> <span class="o">-</span><span class="n">s</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GITHUB</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">&gt;/</span><span class="n">ds001907</span><span class="o">-</span><span class="n">EDU</span><span class="o">.</span><span class="n">git</span> <span class="n">rawdata</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">.</span> <span class="o">-</span><span class="n">s</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ReproNim</span><span class="o">/</span><span class="n">containers</span> <span class="n">containers</span>
 <span class="n">mkdir</span> <span class="n">code</span>
 <span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">.</span> <span class="o">-</span><span class="n">s</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">proj</span><span class="o">-</span><span class="n">nuisance</span><span class="o">/</span><span class="n">simple_workflow</span> <span class="n">code</span><span class="o">/</span><span class="n">simple_workflow</span>
-
-<span class="n">mkdir</span> <span class="n">workdir</span>
+</pre></div>
+</div>
+<p>Make some working space and tell git to ignore the working space</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">workdir</span>
 <span class="n">echo</span> <span class="n">workdir</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
 <span class="n">datalad</span> <span class="n">save</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;ignore workdir&quot;</span> <span class="o">.</span><span class="n">gitignore</span>
 </pre></div>
@@ -625,8 +706,8 @@ called anything (dx, DIAG, condition, etc.), and therefore ‘someone’ would s
 this file. <a class="reference external" href="http://nidm.nidash.org/">NIDM</a> was developed to provide a standardised way to represent what our various data fields ‘mean’. For ‘diagnosis’, to continue the
 example, I could associate that field with a reference to a definition of what we mean for this field, like this <span class="xref myst">link</span>. So, our next step is
 to represent our imaging data in the NIDM representation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># In the my_analysis directory...
-$ bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
+<p>In the my_analysis directory…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>bidsmri2nidm -d $PWD/rawdata -o $PWD/rawdata/my_nidm.ttl
 </pre></div>
 </div>
 <p>You will need to answer a number of questions about your data. Details of an example session are shown <span class="xref myst">here</span>.
@@ -642,10 +723,14 @@ First, lets generate a listing of your cases:</p>
 </pre></div>
 </div>
 <p>cases.txt now lists your cases. Next, looping over all of your cases, let’s convert the .json into NIDM and merge it into your main NIDM representation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>foreach f (`cat cases.txt`)
-echo $f
-fslsegstats2nidm -f $PWD/${f}_ses-1_T1w/segstats.json -subjid $f -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl
-end
+<p><em><strong>At the moment (6/9/22) this will fail, since we don’t have fslsegstats2nidm installed globally. IF you are checking this, you can install it
+for yourself by <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/ReproNim/fsl_seg_to_nidm/archive/refs/heads/master.zip</span></code></strong></em></p>
+<p><em><strong>BASH</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in `cat cases.txt`; 
+do   
+    echo &quot;Working on $i file...&quot;; 
+    fslsegstats2nidm -f $PWD/${i}_ses-1_T1w/segstats.json -subjid $i -o $PWD/file.ttl -n $PWD/rawdata/my_nidm.ttl;
+done
 </pre></div>
 </div>
 <p>This should generate the following output:</p>
@@ -657,7 +742,11 @@ end
 <span class="n">Writing</span> <span class="n">Augmented</span> <span class="n">NIDM</span> <span class="n">file</span><span class="o">...</span>
 </pre></div>
 </div>
-<p>and your volues should now be included in you my_nidm.ttl file!</p>
+<p>and your volumes should now be included in you my_nidm.ttl file!</p>
+<p>Let’s make DataLad happy with the results we have just updated…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">save</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;added imaging and volume metadata&quot;</span> <span class="o">-</span><span class="n">r</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="querying-the-results">
@@ -666,14 +755,76 @@ end
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pynidm</span> <span class="n">query</span> <span class="o">-</span><span class="n">nl</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">-</span><span class="n">u</span> <span class="o">/</span><span class="n">subjects</span>
 </pre></div>
 </div>
-<p>What data elements are in this file?</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pynidm</span> <span class="n">query</span> <span class="o">-</span><span class="n">nl</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">-</span><span class="n">u</span> <span class="o">/</span><span class="n">dataelements</span>
-</pre></div>
-</div>
 <p>What do we know about a particular subject?</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pynidm</span> <span class="n">query</span> <span class="o">-</span><span class="n">nl</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">-</span><span class="n">u</span> <span class="o">/</span><span class="n">subjects</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">RC4101</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pynidm</span> <span class="n">query</span> <span class="o">-</span><span class="n">nl</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">-</span><span class="n">u</span> <span class="o">/</span><span class="n">subjects</span><span class="o">/&lt;</span><span class="n">A</span> <span class="n">subject</span> <span class="kn">from</span> <span class="nn">your</span> <span class="n">cohort</span><span class="o">&gt;</span> 
 </pre></div>
 </div>
+<p>(for example sub-RC4101).</p>
+<p>Extract specific fields, where fsl_000030 is the code for “Right-Thalamus-Proper (mm^3)”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pynidm</span> <span class="n">query</span> <span class="o">-</span><span class="n">nl</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">--</span><span class="n">get_fields</span> <span class="n">age</span><span class="p">,</span><span class="n">fsl_000030</span><span class="p">,</span><span class="n">sex</span>
+</pre></div>
+</div>
+<p>Codes for various structural volumes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Structure</p></th>
+<th class="text-align:center head"><p>Code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Left-Accumbens-area (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000004</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Left-Amygdala (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000006</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Left-Caudate (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000008</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Left-Hippocampus (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000010</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Left-Pallidum (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000012</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Left-Putamen (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000014</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Left-Thalamus-Proper (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000016</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Right-Accumbens-area (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000018</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Right-Amygdala (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000020</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Right-Caudate (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000022</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Right-Hippocampus (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000024</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Right-Pallidum (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000026</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Right-Putamen (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000028</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Right-Thalamus-Proper (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000030</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>csf (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000032</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>gray (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000034</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>white (mm^3)</p></td>
+<td class="text-align:center"><p>fsl_000036</p></td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="linear-regression">
 <h2>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h2>
 <p>Within the my_nidm.ttl we can also perform simple statistical analyses. Returning to our hypotheses, our nidm file knows about age, sex, diagnosis, and the regional brain volumes.
@@ -876,10 +1027,23 @@ Notes:
 </div>
 <div class="section" id="publishing-the-results-to-the-reprolake">
 <h1>Publishing the results to the ReproLake<a class="headerlink" href="#publishing-the-results-to-the-reprolake" title="Permalink to this headline">¶</a></h1>
-<p>We have a StarDog graph database. You can ‘publish’ your results to this accessible database with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+<p>The “ReproLake” is a public repository of metadata (imaging and results). We have implemented a ReproLake using a StarDog graph database. You can ‘publish’ your results to this accessible database with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">--</span><span class="n">location</span> <span class="o">--</span><span class="n">request</span> <span class="n">POST</span> <span class="s1">&#39;https://stardog.scicrunch.io:5821/Repronim_OHBM_2022?graph=urn:http://repronim.org/&lt;YourInitials&gt;&#39;</span> <span class="o">--</span><span class="n">header</span> <span class="s1">&#39;Content-Type: text/turtle&#39;</span> <span class="o">--</span><span class="n">user</span> <span class="n">repro</span><span class="o">-</span><span class="n">student</span><span class="p">:</span><span class="n">XXXX</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">binary</span> <span class="s1">&#39;@/home/jovyan/my_analysis/rawdata/my_nidm.ttl&#39;</span>
 </pre></div>
 </div>
+<p>where the XXXX password will be provided in class, and your own initials should be inserted where specified (this provides a unique identifier).</p>
+<p>In addition to entering our data into the RdeproLake datbase, we can collect publically accessible NIDM files for use with other query engines. Specifically, let’s collect all the NIDM files created by this class. To do this, we will add our NIDM file to a folder in our educational course GitHub repo with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">my_analysis</span>
+<span class="n">cp</span> <span class="n">rawdata</span><span class="o">/</span><span class="n">my_nidm</span><span class="o">.</span><span class="n">ttl</span> <span class="o">~/</span><span class="n">Exercise</span><span class="o">-</span><span class="n">OHBM2022</span><span class="o">/</span><span class="n">Results</span><span class="o">/&lt;</span><span class="n">Your</span> <span class="n">Group</span> <span class="n">Number</span><span class="o">&gt;</span><span class="n">_nidm</span><span class="o">.</span><span class="n">ttl</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">Exercise</span><span class="o">-</span><span class="n">OHBM2022</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">Results</span><span class="o">/&lt;</span><span class="n">Your</span> <span class="n">Group</span> <span class="n">Number</span><span class="o">&gt;</span><span class="n">_nidm</span><span class="o">.</span><span class="n">ttl</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Added &lt;Your Group Number&gt; NIDM file&quot;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">OHBM</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">Your</span> <span class="n">github</span> <span class="n">username</span><span class="o">&gt;/</span><span class="n">OHBMEducation</span><span class="o">-</span><span class="mf">2022.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">OHBM</span>
+</pre></div>
+</div>
+<p>Now, on YOUR fork of the OHBMEducational-2022 repository, you can issue a ‘pull request’ to contribute these results back to the main educational course repository.</p>
+<p><img alt="picture" src="_images/pull_request.png" /></p>
 </div>
 <div class="section" id="publish-the-complete-package">
 <h1>Publish the Complete Package<a class="headerlink" href="#publish-the-complete-package" title="Permalink to this headline">¶</a></h1>
@@ -889,15 +1053,23 @@ have generated new data that does not have an alternate location. So, when we pu
 this newly generated imaging data. For this exmple, we will use Git LFS, whereby a GitHub subscription allows up to 1GB of free storage and up
 to 1GB of bandwidth monthly. The following steps are summarized from the <a class="reference external" href="http://handbook.datalad.org/en/latest/basics/101-139-gitlfs.html">DataLad Handbook here</a>.</p>
 <p>In order to store annexed dataset contents on GitHub, we need first to create a so-called “sibling” of our DataLad dataset:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ datalad create-sibling-github my_experiment
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">create</span><span class="o">-</span><span class="n">sibling</span><span class="o">-</span><span class="n">github</span> <span class="n">my_experiment</span>
+</pre></div>
+</div>
+<p>Remind git to remember you for this repository, to save lots of authenticating later on:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="n">credential</span><span class="o">.</span><span class="n">helper</span> <span class="s1">&#39;cache --timeout=3600&#39;</span>
+</pre></div>
+</div>
+<p>To avoid a possible shortcoming in DataLad GitHub interaction, we do the following first:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">push</span> <span class="o">--</span><span class="n">to</span><span class="o">=</span><span class="n">github</span>
 </pre></div>
 </div>
 <p>And then we initialize a special remote of type <code class="docutils literal notranslate"><span class="pre">git-lfs</span></code>, pointing to the same GitHub repository:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no autoenable=true
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git annex initremote github-lfs type=git-lfs url=https://github.com/$Your_GitHub_Username/my_experiment encryption=none embedcreds=no autoenable=true
 </pre></div>
 </div>
 <p>By running <code class="docutils literal notranslate"><span class="pre">datalad</span> <span class="pre">siblings</span></code> from the dataset directory, it will be evident that we now have two siblings of the original DataLad dataset, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ datalad siblings
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>datalad siblings
 .: here(+) [git]
 .: github(-) [https://github.com/$Your_GitHub_Username/my_experiment.git (git)]
 .: github-lfs(+) [git]
@@ -908,7 +1080,7 @@ to 1GB of bandwidth monthly. The following steps are summarized from the <a clas
 </pre></div>
 </div>
 <p>Finally, with this single step it becomes possible to transfer the entire dataset, including annexed file content, to the same GitHub repository:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ datalad push --to=github
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datalad</span> <span class="n">push</span> <span class="o">--</span><span class="n">to</span><span class="o">=</span><span class="n">github</span>
 </pre></div>
 </div>
 <p>Others can now fork or clone this repository, see your complete process, and re-run the analysis to exactely replicate your results,
