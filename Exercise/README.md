@@ -85,10 +85,31 @@ cd my_ds001907-EDU
 git config credential.helper 'cache --timeout=3600'
 ```
 
-Let's create your own specific working subset from this master dataset. You will receive an assigned set of 10 cases for your working at the class. For this example, I will just take two cases, 
-sub-RC4101 and sub-RC4227 as my assigned cases. Then 
+Let's create your own specific working subset from this master dataset. You (or your working group) will receive a "Group_Number" (i.e. Group_10) which assigns you a set of 10 cases for your working at the class. We then need to:
 1. Remove the sub-* directories from the master data set (that you forked and cloned to your home directory) that are **not** in your assinged dataset
 2. Remove the lines of the *participants.tsv* file that are not for your subjects (your assigned 10 cases)
+
+You can see the cases that are in your group with the following command:
+```
+more ~/Exercise-OHBM2022/Exercise/Groups/Group_10
+```
+which should generate output like:
+```
+Group 10
+sub-RC4101
+sub-RC4128
+sub-RC4129
+sub-RC4130
+sub-RC4131
+sub-RC4206
+sub-RC4207
+sub-RC4208
+sub-RC4210
+sub-RC4211
+```
+We have a simple 'helper script' that will create this subset of directories for you.
+```
+```
 
 The dataset you cloned had some other files that are not necessary, or that we'll regenerate as part of your processing, so let's remove them:
 ```
