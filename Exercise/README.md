@@ -109,6 +109,7 @@ sub-RC4211
 ```
 We have a simple 'helper script' that will create this subset of directories for you.
 ```
+python ~/Exercise-OHBM2022/scripts/data_subset.py -g <YourGroupNumber>
 ```
 
 The dataset you cloned had some other files that are not necessary, or that we'll regenerate as part of your processing, so let's remove them:
