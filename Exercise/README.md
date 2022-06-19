@@ -114,7 +114,7 @@ python ~/Exercise-OHBM2022/scripts/data_subset.py -g <YourGroupNumber>
 
 The dataset you cloned had some other files that are not necessary, or that we'll regenerate as part of your processing, so let's remove them:
 ```
-rm my_ds001907-EDU/nidm.ttl my_ds001907-EDU/demographics.csv
+rm nidm.ttl demographics.csv
 ```
 Next, Let's confirm that your working subset is still have a happy BIDS dataset. The dataset you cloned (which is actually a DataLad dataset, which we will discuss later) so let's clean up the DataLad aspect 
 of this new data subset and run the BIDS validator (locally as a Singularity container application, in a way that deals with a DataLad dataset):
