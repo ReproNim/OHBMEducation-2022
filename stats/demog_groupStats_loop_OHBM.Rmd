@@ -1,0 +1,176 @@
+
+# OHBM Educational Course 2022 - Re-executing a publication
+
+In this R notebook, you will be able to calculate case/control effect sizes
+  and evaluate descriptive statistics for your cohort along the way.
+  
+  First, you need to make sure to set all the appropriate parameters. 
+  
+We will focus on a fixed regression here, but you will have some flexibility   
+  with this script to test out other models
+  
+For this educational course we will run the following models:
+
++ your sample of 5 cases vs 5 controls from the ANT cohort (ds001907; Day et al 2022)
++ the full OpenNeuro ANT cohort (ds001907; Day et al 2022)
++ analysis of 3 other open cohorts used in the ENIGMA-PD publication (Laansma et al 2021)
++ analysis of your ANT cohort merged with the above for a total of 4 cohorts
+
+
+### Read in the data and set the output folder and file names!
+```{r}
+datafile <- read.csv("all4sites_data_OHBM.csv"); #Read in the file
+#datafile <- read.csv("metr_SubCortical_OHBM.csv"); #Read in the file
+#datafile <- read.csv("OpenNeuro_results.csv"); #Read in the file
+
+## REMEMBER TO CHANGE THE OUTPUT NAME EACH RUN
+outFolder="./AllDATA_allROIs_woICV/" ; dir.create(outFolder,"/",showWarnings = FALSE);
+cohortName="MyOHBMcohort-AllDATAFull-woICV"
+eName="ENIGMA-PD"
+```
+```{r}
+# Double check the column names of the file you read in:
+columnnames = colnames(datafile);
+colnames(datafile)
+```
+
+Do you need to calculate ICV? 
+```{r}
+   if (length(datafile[,which(columnnames=="ICV")]) == 0 
+       && length(datafile[,which(columnnames=="csf..mm.3.")]) > 0 ) {
+     print("It looks like you are working with the OHBM results and ICV is not included. We will add volumes of CSF, gray and white matter for you here -- this will serve as a proxy for ICV.")
+     ICV=datafile$csf..mm.3. + datafile$white..mm.3. + datafile$gray..mm.3. 
+     ncol=dim(datafile)[2] ;
+     datafile[,ncol+1]=ICV ; colnames(datafile) <- c(columnnames,"ICV"); columnnames = colnames(datafile) } 
+```
+
+### This code is exclusively for case/control effect sizes as described by the Cohen's D statistic. It is important to ensure the code uses the proper column and indicator for cases vs controls: 
+```{r}
+# what is the column header for case/control or indicating diagnostic status?
+caseColumnHeader= "Dx" #"Dx"
+# how are cases coded (1,0,"patients","cases")?
+caseIndicator=1 # in this code those not coded as cases are assumed to be controls
+```
+
+### We will be including age and sex in all models here. However, you can turn this feature off. 
+```{r}
+# what is the column header for age?
+ageColumnHeader="Age" # "Age" 
+# what is the column header for sex?
+sexColumnHeader="Sex" # "Sex" 
+# how are males coded (1,0,"M","males",-0.5)?
+maleIndicator=1 #sex is included in the regression as a categorical variable, or factor
+# would you like to include age, sex, and an age-x-sex interaction term in the regression?
+includeAgeSexinModel=TRUE
+# includeAgeSexInteractioninModel == TRUE # this option has been removed but you can add it back in (experts only -- be careful!)
+```
+
+### Do you have other covariates to include? We will ask about continuous and categorical variables separately
+#### First, continuous:
+```{r}
+# how many continuous covariates other than age should be used from your spreadsheet?
+otherCovariatesN=0
+# list out the covariates and separate them with a semi-colon
+otherCovariates="ICV" 
+#note if your ROI is ICV, you will not want ICV as a covariate, so you'd have to run through the script again for the separate model
+```
+#### Next, categorical:
+```{r}
+# how many categorical covariates are in your spreadsheet other than sex?
+## (examples might include site / scanner / study / different diagnostic groups) 
+otherCatCovariatesN=0
+# list out the categorical covariates (coded as factors) and separate them with a semi-colon
+otherCatCovariates="site"
+```
+
+### What ROIs will you be looping over with the same statistical model? 
+```{r}
+#ROINames<-c("Left-Accumbens-area (mm^3)","Left-Amygdala (mm^3)","Left-Caudate (mm^3)","Left-Hippocampus (mm^3)","Left-Pallidum (mm^3)","Left-Putamen (mm^3)","Left-Thalamus-Proper (mm^3)","Right-Accumbens-area (mm^3)","Right-Amygdala (mm^3)","Right-Caudate (mm^3)","Right-Hippocampus (mm^3)","Right-Pallidum (mm^3)","Right-Putamen (mm^3)","Right-Thalamus-Proper (mm^3)");
+
+ROINames<-c("Lthal","Rthal","Lcaud","Rcaud","Lput","Rput","Lpal","Rpal","Lhippo","Rhippo","Lamyg","Ramyg","Laccumb","Raccumb")
+
+# ICV would require a different model since we will covary for ICV for the subcortical regions, so we'd run that separately 
+#ROINames<-c("ICV")
+ROINames<-make.names(ROINames)
+#Get number of structures to test
+Nrois=length(ROINames)
+print(paste("We will be looping Cohen's D statistics over data from",Nrois,"regions of interest."))
+```
+
+### We will source some functions that we will use for Cohen's D calculations from a linear regression output. Feel free to take a look at these functions to see what they do
+```{r}
+# If this file is in the same folder as your current working directory, no need to change the input, otherwise please make sure the file with the appropriate path is sourced.
+source('ENIGMA_cohensD_functions.R')
+```
+
+# Here we go! 
+
+## Sanity checks:
+
+```{r}
+ # Check for duplicated SubjIDs that may cause issues with merging data sets.
+ if(anyDuplicated(datafile[,1]) != 0) { stop('You have duplicate SubjIDs in your file or subject ID is not your first column.\nMake sure there are no repeat SubjIDs.') }
+
+ # Check all ROIs are column headers in the input CSV
+ missingROIS=NULL; l_missing=0;
+ for (roi in 1:Nrois) {
+   if (length(datafile[,which(columnnames==ROINames[roi])]) == 0) {
+        print(ROINames[roi])
+     missingROIS=paste(missingROIS,ROINames[roi])
+     l_missing=l_missing+1; }
+   }
+ if (l_missing >= 1) { warning(paste("You are missing ROIs in your file.\n Please check.",sep=""))}
+```
+################################################################### 
+
+## Group statistics and plots
+
+Make sure packages are installed
+```{r, eval=FALSE}
+install.packages('tidyverse','ggpubr','DT','RColorBrewer','scales')
+```
+
+Load libraries
+```{r, eval=TRUE}
+library(ggpubr)
+library('tidyverse')
+library('DT')
+library(scales)
+library(RColorBrewer)
+```
+```{r}
+p1<- ggplot(data=datafile, aes(.data[[ageColumnHeader]], fill=factor(.data[[caseColumnHeader]])))  +
+  geom_histogram(aes(y = (..count..)/sum(..count..)),bins=10, position = "dodge",color="black"  ) + 
+        scale_y_continuous(labels = percent) +
+   xlab("Age")+ ylab("Percent")
+p2<- ggplot(data=datafile, aes(.data[[ageColumnHeader]], fill=factor(.data[[sexColumnHeader]]))) +
+   geom_histogram(aes(y = (..count..)/sum(..count..)),bins=10, position = "dodge",color="black" ) + 
+        scale_y_continuous(labels = percent) +
+   xlab("Age")+ ylab("Percent")
+ggarrange(p1,p2, labels=c("Age by diagnosis", "Age by sex"),ncol=2,nrow=1,common.legend = FALSE, legend = "right")
+
+# Box plot for multiple sites
+if (length(datafile[,which(columnnames=="site")]) != 0 ) {
+  bp<-ggplot(datafile, aes(x=site, y=.data[[ageColumnHeader]], fill=site)) +
+  geom_boxplot()
+figure<-bp
+print(figure)
+  for (s in unique(datafile$site)) {
+    datasite = subset.data.frame(datafile,site==s)
+    p1<- ggplot(data=datasite, aes(.data[[ageColumnHeader]], fill=factor(.data[[caseColumnHeader]])))  +
+  geom_histogram(aes(y = (..count..)/sum(..count..)),bins=5, position = "dodge",color="black"  ) + 
+        scale_y_continuous(labels = percent) +
+   xlab("Age")+ ylab("Percent")
+p2<- ggplot(data=datasite, aes(.data[[ageColumnHeader]], fill=factor(.data[[sexColumnHeader]]))) +
+   geom_histogram(aes(y = (..count..)/sum(..count..)),bins=5, position = "dodge",color="black" ) + 
+        scale_y_continuous(labels = percent) +
+   xlab("Age")+ ylab("Percent")
+figure<-ggarrange(p1,p2, labels=c(paste(s,"age X diagnosis"), paste(s,"age X sex")),ncol=2,nrow=1,common.legend = FALSE, legend = "right")
+print(figure)
+  }
+}
+
+
+
+```
+
