@@ -33,7 +33,9 @@ We will do our re-executable publication in a sequence of steps that are designe
 course.
 
 ## Create a GitHub Repo for your Publication
-In this case, our final publication will be in the form of a GitHub repository, where we can connect all the parts of our publication in a central, 
+***Note*** We're not going to do this today, but in the event of a 'real' paper we would do the following.
+
+Our final publication should include a GitHub repository, where we can connect all the parts of our publication in a central, 
 shared location. A GitHub repo is FAIR: Findable, Accessible, Interoperable and Reusable. Since this will be 'self published' and not peer-reviewed, 
 we really should think of this as a pre-print of our 'publication'. Were this an actual publication, we would create a more formal document, complying
 with the norms of traditional scientific publication, and submit to a peer-reviewed journal (after depositing the preprint as well).
