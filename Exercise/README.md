@@ -516,6 +516,11 @@ git add Results/<Your Group Number>_nidm.ttl
 git commit -m "Added <Your Group Number> NIDM file"
 git remote add OHBM https://github.com/<Your github username>/OHBMEducation-2022.git
 git push OHBM
+```
+Now, on YOUR fork of the OHBMEducational-2022 repository, you can issue a 'pull request' to contribute these results back to the main educational course repository.
+
+![picture](../pics/pull_request.png)
+
 
 
 # Publish the Complete Package
