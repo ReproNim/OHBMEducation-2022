@@ -1,8 +1,15 @@
 # The Publication Exercise for the course
 
-# Prerequsite
+# Prerequsites
 Don't have an account on github ? please create one on [GitHub](https://github.com)
 You will need a **token** - please navigate to your account (top right) and then go to "developer settings" and "personal access token" create a token - click on "repo" and take the token to do things like `git push` (see below). 
+
+For the exercises below it will also be important to have a 'fork' of the "ReproNim/OHBMEducation-2022" GitHub repository. to do this:
+1. Navigate your browser to https://github.com/ReproNim/OHBMEducation-2022
+2. Select 'fork' in the row of operations at the top of the window
+3. Select 'Create Fork'
+
+You now have you own copy of the couse materials to use in the future.
 
 # JupyterHub
 JupyterHub provides the computational platform we will use. We can all use a common platform with all our needed software prerequisites 
