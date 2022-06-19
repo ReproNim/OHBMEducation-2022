@@ -49,7 +49,7 @@ topic [here](https://help.osf.io/article/158-create-a-preregistration).
 In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the 
 [OpenNeuro ds001907](https://openneuro.org/datasets/ds001907/versions/3.0.2) collection. The description of this study can be found at the 
 OpenNeuro website, and this data was published in the following [data paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7217223/). There are 
-46 subjects in this overall dataset (25 healthy aging, 21 Parkinson's Disease).  
+46 subjects in this overall dataset (25 healthy aging, 21 Parkinson's Disease).  There are many other potential sources of Parkinson's disease data: [NITRC-IR](https://www.nitrc.org/xnat/index.php), [Parkinson's Progression Markers Initiative](https://www.nitrc.org/projects/ppmi), [OpenNeuro](https://www.nitrc.org/projects/openneuro), etc.
 
 ### Data Subset
 Each student (or student group) will be assigned a subset of the above dataset for their analysis. This is both for practical purposes, as there is 
