@@ -263,10 +263,7 @@ Now, what can we do with our results? We can interogate the my_nidm.ttl file for
 ```
 pynidm query -nl rawdata/my_nidm.ttl -u /subjects
 ```
-What data elements are in this file?
-```
-pynidm query -nl rawdata/my_nidm.ttl -u /dataelements
-```
+
 What do we know about a particular subject?
 ```
 pynidm query -nl rawdata/my_nidm.ttl -u /subjects/sub-RC4101
