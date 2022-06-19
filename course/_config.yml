@@ -43,7 +43,7 @@ launch_buttons:
 repository:
   url                       : https://github.com/ReproNim/OHBMEducation-2022  # The URL to your book's repository
   path_to_book              : "course/"  # A path to your book's folder, relative to the repository root.
-  branch                    : jupyter_book  # Which branch of the repository should be used when creating links
+  branch                    : main  # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings
