@@ -46,6 +46,10 @@ def main(dirname, group):
         if dir.startswith("sub-") and dir not in selected_sub:
             shutil.rmtree(Path(dirname) / dir)
 
+    # removing additional files
+    os.remove(Path(dirname) / "nidm.ttl")
+    os.remove(Path(dirname) / "demographics.csv")
+
     # updating participant file
     participate_file_update(dirname, selected_sub)
 
