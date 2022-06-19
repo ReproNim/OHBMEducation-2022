@@ -500,13 +500,23 @@ Notes:
 
 
 # Publishing the results to the ReproLake
-We have a StarDog graph database. You can 'publish' your results to this accessible database with the following command:
+The "ReproLake" is a public repository of metadata (imaging and results). We have implemented a ReproLake using a StarDog graph database. You can 'publish' your results to this accessible database with the following command:
 
-This will be something like the following (but is still under TODO debugging and planning):
 ```
 curl --location --request POST 'https://stardog.scicrunch.io:5821/Repronim_OHBM_2022?graph=urn:http://repronim.org/<YourInitials>' --header 'Content-Type: text/turtle' --user repro-student:XXXX --data-binary '@/home/jovyan/my_analysis/rawdata/my_nidm.ttl'
 ```
 where the XXXX password will be provided in class, and your own initials should be inserted where specified (this provides a unique identifier).
+
+In addition to entering our data into the RdeproLake datbase, we can collect publically accessible NIDM files for use with other query engines. Specifically, let's collect all the NIDM files created by this class. To do this, we will add our NIDM file to a folder in our educational course GitHub repo with the following commands:
+```
+cd ~/my_analysis
+cp rawdata/my_nidm.ttl ~/Exercise-OHBM2022/Results/<Your Group Number>_nidm.ttl
+cd ~/Exercise-OHBM2022
+git add Results/<Your Group Number>_nidm.ttl
+git commit -m "Added <Your Group Number> NIDM file"
+git remote add OHBM https://github.com/<Your github username>/OHBMEducation-2022.git
+git push OHBM
+
 
 # Publish the Complete Package
 There are numerous places you can now share this complete dataset. GitHub does not 'like' large binary datasets, all the imaging data we have
