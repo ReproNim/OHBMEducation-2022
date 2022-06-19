@@ -135,7 +135,7 @@ Great, you now have a valid BIDS (and DataLad) dataset.
 
 Now you can now "publish" this dataset by pushing it back to your GitHub repo:
 ```
-cd my_ds001907-EDU
+~/my_data/my_ds001907-EDU
 git push
 ```
 ***Note:*** Git may or may not ask you for your username and password, but by password, it rally means the ***token*** that you saved earlier, depending on how you have your git account setup. Make sure you have your token...
