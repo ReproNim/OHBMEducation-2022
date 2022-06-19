@@ -266,8 +266,10 @@ pynidm query -nl rawdata/my_nidm.ttl -u /subjects
 
 What do we know about a particular subject?
 ```
-pynidm query -nl rawdata/my_nidm.ttl -u /subjects/sub-RC4101
+pynidm query -nl rawdata/my_nidm.ttl -u /subjects/<A subject from your cohort> 
 ```
+(for example sub-RC4101).
+
 Extract specific fields, where fsl_000030 is the code for "Right-Thalamus-Proper (mm^3)":
 ```
 pynidm query -nl rawdata/my_nidm.ttl --get_fields age,fsl_000030,sex
