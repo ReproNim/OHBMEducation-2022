@@ -124,7 +124,7 @@ datalad save -m "My new dataset" .
 
 And then actually run the validator (using singularity):
 ```
-cd ..
+cd ~/my_data
 singularity exec --bind $PWD/my_ds001907-EDU:/data /shared/sing/bids_validator.simg bids-validator /data --ignoreSymlinks --ignoreNiftiHeaders
 ```
 
