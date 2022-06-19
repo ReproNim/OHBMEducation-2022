@@ -367,24 +367,17 @@ pre code {
 
 <div id="ohbm-educational-course-2022---re-executing-a-publication" class="section level1">
 <h1>OHBM Educational Course 2022 - Re-executing a publication</h1>
-<p>In this R notebook, you will be able to calculate case/control effect
-sizes and evaluate descriptive statistics for your cohort along the
-way.</p>
+<p>In this R notebook, you will be able to make plots for looking
+through some of the data that will be used to calculate case/control
+effect sizes and evaluate descriptive statistics for your cohort along
+the way.</p>
 <p>First, you need to make sure to set all the appropriate
 parameters.</p>
-<p>We will focus on a fixed regression here, but you will have some
-flexibility<br />
-with this script to test out other models</p>
-<p>For this educational course we will run the following models:</p>
-<ul>
-<li>your sample of 5 cases vs 5 controls from the ANT cohort (ds001907;
-Day et al 2022)</li>
-<li>the full OpenNeuro ANT cohort (ds001907; Day et al 2022)</li>
-<li>analysis of 3 other open cohorts used in the ENIGMA-PD publication
-(Laansma et al 2021)</li>
-<li>analysis of your ANT cohort merged with the above for a total of 4
-cohorts</li>
-</ul>
+<p>We will plot age distributions for diagnostic and sex differences for
+each cohort, but you can use this setup for other plots as well.</p>
+<p>The first part of this notebook is set up just as before. You will
+need to install some R packages and load the libraries to ensure plots
+are displayed.</p>
 <div id="read-in-the-data-and-set-the-output-folder-and-file-names" class="section level3">
 <h3>Read in the data and set the output folder and file names!</h3>
 <pre class="r"><code>datafile &lt;- read.csv(&quot;all4sites_data_OHBM.csv&quot;); #Read in the file
