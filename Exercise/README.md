@@ -16,7 +16,7 @@ JupyterHub provides the computational platform we will use. We can all use a com
 and environment pre-set. This eliminates the hassle of making all this work on everyone's local computers. However, the downside is that you 
 may not be able to replicate this example 'at home' unless/until you solve the software prerequisites on your own computational platform.
 That's OK, ***ReproNim*** is here to help after the course with your own 'home' computational platform 
-<-- not sure this should be here... [our-hub](https://hub.repronim.org/hub/spawn).-->
+<!--- not sure this should be here... [our-hub](https://hub.repronim.org/hub/spawn). --->
 
 ## Meet your ReproHub
 The ReproHub is hosted at a URL that we will give you in class. Point your browser to this url. You will use your GitHub authorization in order to log in.
