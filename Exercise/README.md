@@ -43,7 +43,7 @@ with the norms of traditional scientific publication, and submit to a peer-revie
 ## Pre-Registration
 In this case, we do have a specific set of hypotheses we are testing. In general, we *should* pre-register this plan (or consider a [registered report]()) 
 but those steps are considered to be outside the scope of what we can accomplish in our time together. We highly recommend you read more about this 
-topic [here]()
+topic [here](https://help.osf.io/article/158-create-a-preregistration).
 
 ## Collect Data
 In this case we will use pre-collected data. Specifically, each of you will be assigned a subset of the 
